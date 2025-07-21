@@ -1,0 +1,148 @@
+/* 
+	author: istockphp.com
+*/
+#backgroundPopup { 
+	z-index:1;
+	position: fixed;
+	display:none;
+	height:100%;
+	width:100%;
+	background:#000000;	
+	top:0px;  
+	left:0px;
+}
+#topuprecordnotfound {
+	font-family: "Kh Battambang";
+    background: none repeat scroll 0 0#F6F7FB;
+    border-radius: 3px 3px 3px 3px;
+    color: #333333;
+    display: none;
+	font-size: 14px;
+    height: 365px;
+    left: 50%;
+    margin-left: -271px;
+    position: fixed;
+    top:0.9%;
+    width: 572px;
+    z-index: 999;
+   box-shadow: 0 0 2px 4px #C2C5C8;
+}
+#toPopup {
+	font-family: "Kh Battambang";
+    background: none repeat scroll 0 0#F6F7FB;
+    border-radius: 3px 3px 3px 3px;
+    color: #333333;
+    display: none;
+	font-size: 14px;
+    height: 365px;
+    left: 50%;
+    margin-left: -271px;
+    position: fixed;
+    top:0.9%;
+    width: 572px;
+    z-index: 999;
+   box-shadow: 0 0 2px 4px #C2C5C8;
+}
+div.loader {
+    background: url("../Styles/images/img/loading.gif") no-repeat scroll 0 0 transparent;
+    height: 32px;
+    width: 32px;
+	display: none;
+	z-index: 999999;
+	top: 40%;
+	left: 50%;
+	position: absolute;
+	margin-left: -10px;
+}
+div.close {
+    background: url("../App_Themes/images/closebox.png") no-repeat scroll 0 0 transparent;
+    bottom: 8px;
+    cursor: pointer;
+    float: right;
+    height: 30px;
+    left: 9px;
+    position: relative;
+    width: 30px;
+}
+span.ecs_tooltip {
+    background: none repeat scroll 0 0 #000000;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    display: none;
+    font-size: 11px;
+    height: 16px;
+    opacity: 0.7;
+    padding: 4px 3px 2px 5px;
+    position: absolute;
+    right: -45px;
+    text-align: center;
+    top: -40px;
+    width: 93px;
+}
+div.close1 {
+    background: url("../Styles/images/img/closebox.png") no-repeat scroll 0 0 transparent;
+    bottom: 8px;
+    cursor: pointer;
+    float: right;
+    height: 30px;
+    left: 9px;
+    position: relative;
+    width: 30px;
+}
+div.closenotfound {
+    background: url("../Styles/images/img/closebox.png") no-repeat scroll 0 0 transparent;
+    bottom: 8px;
+    cursor: pointer;
+    float: right;
+    height: 30px;
+    left: 9px;
+    position: relative;
+    width: 30px;
+}
+span.ecs_tooltipnotfound {
+    background: none repeat scroll 0 0 #000000;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    display: none;
+    font-size: 11px;
+    height: 16px;
+    opacity: 0.7;
+    padding: 4px 3px 2px 5px;
+    position: absolute;
+    right: -45px;
+    text-align: center;
+    top: -40px;
+    width: 93px;
+}
+span.ecs_tooltip1 {
+    background: none repeat scroll 0 0 #000000;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    display: none;
+    font-size: 11px;
+    height: 16px;
+    opacity: 0.7;
+    padding: 4px 3px 2px 5px;
+    position: absolute;
+    right: -45px;
+    text-align: center;
+    top: -40px;
+    width: 93px;
+}
+span.arrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #000000;
+    display: block;
+    height: 1px;
+    left: 40px;
+    position: relative;
+    top: 3px;
+    width: 1px;
+}
+div#popup_content {
+    margin: 4px 7px;
+}
+div#popup_content1 {
+    margin: 4px 7px;
+}

@@ -1,0 +1,20 @@
+11:27:13   []   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [da_micro_application=>SearchApplication(string applicationNumber, string customerName, DateTime customerDOB, int customerGender, string agentCode, string agentName)], Detail: Incorrect syntax near ') AND (SA.Full_Name LIKE '.
+Unclosed quotation mark after the character string ') '.
+
+14:11:24   [bl_sys_user_role=>GetSysUserRole(List<bl_sys_user_role> UserRole, string ObjectCode)]   Error function [GetSysUserRole(List<bl_sys_user_role> UserRole, string ObjectCode)] in class [bl_sys_user_role], detail: Value cannot be null.
+Parameter name: source=>   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at bl_sys_user_role.GetSysUserRole(List`1 UserRole, String ObjectCode) in d:\SYSTEM\CLIFE-Micro - IA\76-Print-Cert-Opt\Clife-WDL\App_Code\BL\SYS\bl_sys_user_role.cs:line 149
+
+15:25:41   [bl_sys_user_role=>GetSysUserRole(List<bl_sys_user_role> UserRole, string ObjectCode)]   Error function [GetSysUserRole(List<bl_sys_user_role> UserRole, string ObjectCode)] in class [bl_sys_user_role], detail: Value cannot be null.
+Parameter name: source=>   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at bl_sys_user_role.GetSysUserRole(List`1 UserRole, String ObjectCode) in d:\SYSTEM\CLIFE-Micro - IA\76-Print-Cert-Opt\Clife-WDL\App_Code\BL\SYS\bl_sys_user_role.cs:line 149
+
+15:28:13   [maneth.som]   Error function [Execute] in class[DB] execute by [da_sale_agent=>AddSaleAgentMicro(bl_sale_agent_micro obj)], Detail: Violation of PRIMARY KEY constraint 'Ct_Sale_Agent_PK'. Cannot insert duplicate key in object 'dbo.Ct_Sale_Agent'. The duplicate key value is (99999).
+The statement has been terminated.
+
+16:25:02   [bl_sys_user_role=>GetSysUserRole(List<bl_sys_user_role> UserRole, string ObjectCode)]   Error function [GetSysUserRole(List<bl_sys_user_role> UserRole, string ObjectCode)] in class [bl_sys_user_role], detail: Value cannot be null.
+Parameter name: source=>   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at bl_sys_user_role.GetSysUserRole(List`1 UserRole, String ObjectCode) in d:\SYSTEM\CLIFE-Micro - IA\76-Print-Cert-Opt\Clife-WDL\App_Code\BL\SYS\bl_sys_user_role.cs:line 149
+
+16:39:58   [maneth.som]   Error function [IsDate(string date_string)] in class [Helper], detail: String was not recognized as a valid DateTime.
+

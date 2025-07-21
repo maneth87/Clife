@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_report" targetNamespace="http://tempuri.org/ds_report.xsd" xmlns:mstns="http://tempuri.org/ds_report.xsd" xmlns="http://tempuri.org/ds_report.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_report" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_report" msprop:Generator_UserDSName="ds_report">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_official_receipt" msprop:Generator_TableClassName="dt_official_receiptDataTable" msprop:Generator_TableVarName="tabledt_official_receipt" msprop:Generator_TablePropName="dt_official_receipt" msprop:Generator_RowDeletingName="dt_official_receiptRowDeleting" msprop:Generator_RowChangingName="dt_official_receiptRowChanging" msprop:Generator_RowEvHandlerName="dt_official_receiptRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_official_receiptRowDeleted" msprop:Generator_UserTableName="dt_official_receipt" msprop:Generator_RowChangedName="dt_official_receiptRowChanged" msprop:Generator_RowEvArgName="dt_official_receiptRowChangeEvent" msprop:Generator_RowClassName="dt_official_receiptRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Receipt_No" msprop:Generator_ColumnVarNameInTable="columnReceipt_No" msprop:Generator_ColumnPropNameInRow="Receipt_No" msprop:Generator_ColumnPropNameInTable="Receipt_NoColumn" msprop:Generator_UserColumnName="Receipt_No" type="xs:string" minOccurs="0" />
+              <xs:element name="Pay_Date" msprop:Generator_ColumnVarNameInTable="columnPay_Date" msprop:Generator_ColumnPropNameInRow="Pay_Date" msprop:Generator_ColumnPropNameInTable="Pay_DateColumn" msprop:Generator_UserColumnName="Pay_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Customer_NAME" msprop:Generator_ColumnVarNameInTable="columnCustomer" msprop:Generator_ColumnPropNameInRow="Customer" msprop:Generator_ColumnPropNameInTable="CustomerColumn" msprop:Generator_UserColumnName="Customer" type="xs:string" minOccurs="0" />
+              <xs:element name="Gross_Prem" msprop:Generator_ColumnVarNameInTable="columnGross_Prem" msprop:Generator_ColumnPropNameInRow="Gross_Prem" msprop:Generator_ColumnPropNameInTable="Gross_PremColumn" msprop:Generator_UserColumnName="Gross_Prem" type="xs:long" minOccurs="0" />
+              <xs:element name="Policy_NUMBER" msprop:Generator_ColumnVarNameInTable="columnPolicy_No" msprop:Generator_ColumnPropNameInRow="Policy_No" msprop:Generator_ColumnPropNameInTable="Policy_NoColumn" msprop:Generator_UserColumnName="Policy_No" type="xs:string" minOccurs="0" />
+              <xs:element name="Insurance_Plan" msprop:Generator_ColumnVarNameInTable="columnInsurance_Plan" msprop:Generator_ColumnPropNameInRow="Insurance_Plan" msprop:Generator_ColumnPropNameInTable="Insurance_PlanColumn" msprop:Generator_UserColumnName="Insurance_Plan" type="xs:string" minOccurs="0" />
+              <xs:element name="Pay_Mode" msprop:Generator_ColumnVarNameInTable="columnPay_Mode" msprop:Generator_ColumnPropNameInRow="Pay_Mode" msprop:Generator_ColumnPropNameInTable="Pay_ModeColumn" msprop:Generator_UserColumnName="Pay_Mode" type="xs:string" minOccurs="0" />
+              <xs:element name="Method_NAME" msprop:Generator_ColumnVarNameInTable="columnMethod_Payment" msprop:Generator_ColumnPropNameInRow="Method_Payment" msprop:Generator_ColumnPropNameInTable="Method_PaymentColumn" msprop:Generator_UserColumnName="Method_Payment" type="xs:string" minOccurs="0" />
+              <xs:element name="Method_Note" msprop:Generator_ColumnVarNameInTable="columnMethod_Note" msprop:Generator_ColumnPropNameInRow="Method_Note" msprop:Generator_ColumnPropNameInTable="Method_NoteColumn" msprop:Generator_UserColumnName="Method_Note" type="xs:string" minOccurs="0" />
+              <xs:element name="AMOUNT" msprop:Generator_ColumnVarNameInTable="columnInterest_Amount" msprop:Generator_ColumnPropNameInRow="Interest_Amount" msprop:Generator_ColumnPropNameInTable="Interest_AmountColumn" msprop:Generator_UserColumnName="Interest_Amount" type="xs:long" minOccurs="0" />
+              <xs:element name="Received_BY" msprop:Generator_ColumnVarNameInTable="columnReceived" msprop:Generator_ColumnPropNameInRow="Received" msprop:Generator_ColumnPropNameInTable="ReceivedColumn" msprop:Generator_UserColumnName="Received" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_invoice">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Group_master_code" type="xs:string" minOccurs="0" />
+              <xs:element name="Channel_name" type="xs:string" minOccurs="0" />
+              <xs:element name="Address" type="xs:string" minOccurs="0" />
+              <xs:element name="Address_kh" type="xs:string" minOccurs="0" />
+              <xs:element name="Tel" type="xs:string" minOccurs="0" />
+              <xs:element name="Vat_Tin" type="xs:string" minOccurs="0" />
+              <xs:element name="Invoice_number" type="xs:string" minOccurs="0" />
+              <xs:element name="Invoice_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Invoice_due_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Amount" type="xs:double" minOccurs="0" />
+              <xs:element name="Discount_amount" type="xs:double" minOccurs="0" />
+              <xs:element name="Total_amount" type="xs:double" minOccurs="0" />
+              <xs:element name="exchange_rate_tax" type="xs:double" minOccurs="0" />
+              <xs:element name="Number_policy" type="xs:int" minOccurs="0" />
+              <xs:element name="Channel_name_kh" type="xs:string" minOccurs="0" />
+              <xs:element name="Total_amount_kh" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

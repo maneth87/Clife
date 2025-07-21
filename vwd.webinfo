@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<!-- 
+  Visual Studio global web project settings.
+-->
+<VisualWebDeveloper>
+
+  <comReferences>
+    <reference Name="interop.crystalactivexreportviewerlib10" ID="{3C62B3DD-12BE-4941-A787-EA25415DCD27}\10.0\0"/>
+    <reference Name="interop.crdesignerlib" ID="{C0AA5023-C763-4A4B-AFED-ADCF78D6C08B}\13.0\0"/>
+    <reference Name="interop.crystalactivexreportviewerlib11_5" ID="{F62B9FA4-455F-4FE3-8A2D-205E4F0BCAFB}\11.5\0"/>
+  </comReferences>
+</VisualWebDeveloper>

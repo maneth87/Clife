@@ -1,0 +1,105 @@
+﻿@page {
+    size: A4;
+    margin: 5px;
+    /*font-family: Arial;*/
+    font-size: 8pt;
+    width: 210mm;
+    height: 297mm;
+    
+}
+
+html {
+    margin: 0px;
+}
+
+body {
+    font-family: Arial;
+    font-size: 8pt;
+    
+}
+
+.table {
+    width: 96%;
+    border: thin solid #000000;
+    font-family: Arial;
+    font-size: 8pt;
+}
+
+    .table p {
+        font-size: 8pt;
+    }
+
+    .tr {
+        
+    }
+
+
+        .table tr td {
+            border-bottom: thin solid #000000;
+            vertical-align: top; 
+   
+           
+        }
+
+.td-left {
+    width: 150px;
+    padding-left: 5px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.td-left-normal {
+    width: 150px;
+    padding-left: 5px;
+    color: #000000;
+    font-weight: bold;
+    border-bottom-style: none;
+}
+
+.td-right {
+    padding-left: 5px;
+    color: #000000;
+}
+
+.td-center {
+    border-bottom: thin solid #000000;
+    border-right: thin solid #000000;
+    padding-right: 4px;
+    padding-left: 0px;
+}
+
+.td-last {
+    border-bottom: none;
+}
+
+.tb-footer {
+    text-align: left;
+    margin-top: 500px;
+}
+
+/*view table css*/
+table.gridtable {
+    font-family: arial,verdana,sans-serif;
+    color: #333333;
+    border: thin solid #000000;
+    border-collapse: collapse;
+    border-style: solid;
+    font-size: 7pt;
+    width: 96%;
+    color:red;
+}
+
+    table.gridtable th {
+        border-width: 10px;
+        padding: 3px;
+        border: thin solid #000000;
+        background-color: lightgray;
+    }
+
+    table.gridtable td {
+        border-width: 1px;
+        padding: 3px;
+        border: thin solid #000000;
+        background-color: #ffffff;
+        
+    }

@@ -1,0 +1,4 @@
+22:01:30   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [], Detail: ExecuteReader: CommandText property has not been initialized
+
+22:06:39   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [], Detail: ExecuteReader: CommandText property has not been initialized
+

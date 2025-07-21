@@ -1,0 +1,14 @@
+
+====== Update Webpage ======
+
+1. banca_micro_application.aspx
+	- add new section for Payment
+		=> add new button "Payment" 
+
+
+====== Modified classes/functions ======
+1. class banca_micro_application.aspx.cs
+	- BindExisting()
+	- bntIssue_Click(object sender, EventArgs e)
+		: update 
+		: add one more condition on sending email option.

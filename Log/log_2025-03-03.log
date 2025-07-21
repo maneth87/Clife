@@ -1,0 +1,5 @@
+16:03:19   []   Error function [GetData] in class [DB], Detail: The handle is invalid. (Exception from HRESULT: 0x80070006 (E_HANDLE))
+
+16:03:19   []   Error function[GetCertificateBytesOption(string policyId, string policyType, string printPolInsurance)] in class [Certificate], detail:Cannot find table 0.=>   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at Certificate.GetCertificateBytesOption(String policyId, String policyType, String printPolInsurance) in d:\SYSTEM\CLIFE-Micro - IA\76-Print-Cert-Opt\Clife-WDL\App_Code\Services\Certificate.cs:line 1151
+

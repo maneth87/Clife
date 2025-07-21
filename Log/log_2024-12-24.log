@@ -1,0 +1,28 @@
+13:01:34   [maneth.som]   Errof function [frm_gmCustomer_upload.aspx.cs=> validateFile()], detail:    at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at Helper.FormatDateTime(String strDate) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\App_Code\Helper\Helper.cs:line 542
+   at Pages_Business_frm_gmCustomer_upload.validateFile() in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\Pages\Business\frm_gmCustomer_upload.aspx.cs:line 1604
+
+13:03:29   [maneth.som]   Errof function [frm_gmCustomer_upload.aspx.cs=> validateFile()], detail:    at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at Helper.FormatDateTime(String strDate) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\App_Code\Helper\Helper.cs:line 542
+   at Pages_Business_frm_gmCustomer_upload.validateFile() in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\Pages\Business\frm_gmCustomer_upload.aspx.cs:line 1604
+
+13:04:02   [maneth.som]   Error function [GetWingDigitalLoanlList(string createdBy, DateTime createdOn)] in class [da_micro_group_loan_upload], detail: String was not recognized as a valid DateTime.
+
+13:04:02   [maneth.som]   Error function [btnUpload_Click(object sender, EventArgs e)] in class [frm_gmCustomer_upload.aspx.cs], detail:Object reference not set to an instance of an object.
+
+13:04:20   [maneth.som]   Error function [GetWingDigitalLoanlList(string createdBy, DateTime createdOn)] in class [da_micro_group_loan_upload], detail: String was not recognized as a valid DateTime.
+
+13:04:20   [maneth.som]   Error function [btnUpload_Click(object sender, EventArgs e)] in class [frm_gmCustomer_upload.aspx.cs], detail:Object reference not set to an instance of an object.
+
+14:09:28   [maneth.som]   Error function [btnUpload_Click(object sender, EventArgs e)] in class [frm_gmCustomer_upload.aspx.cs], detail:Object reference not set to an instance of an object.
+
+14:11:15   [maneth.som]   Error function [btnUpload_Click(object sender, EventArgs e)] in class [frm_gmCustomer_upload.aspx.cs], detail:Object reference not set to an instance of an object.
+
+14:22:54   [MANETH.SOM]   Error function [btnUpload_Click(object sender, EventArgs e)] in class [frm_gmCustomer_upload.aspx.cs], detail:Object reference not set to an instance of an object.
+
+14:24:55   [MANETH.SOM]   Error function [btnUpload_Click(object sender, EventArgs e)] in class [frm_gmCustomer_upload.aspx.cs], detail:Object reference not set to an instance of an object.
+
+14:28:01   [MANETH.SOM]   Error function [btnUpload_Click(object sender, EventArgs e)] in class [frm_gmCustomer_upload.aspx.cs], detail:Object reference not set to an instance of an object.
+

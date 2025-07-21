@@ -1,0 +1,12 @@
+16:18:00   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Cannot find table 0.
+
+17:05:48   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Cannot find table 0.
+
+17:12:04   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Cannot find table 0.
+
+17:36:21   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Cannot find table 0.
+
+18:19:57   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [da_referral => GetActiveReferral(string channelItemId, string channelLocationId, string referralInfo, string userName)], Detail: Procedure or function 'SP_CT_MICRO_REFERRAL_ACTIVE' expects parameter '@CHANNEL_ITEM_ID', which was not supplied.
+
+18:24:28   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [da_referral => GetActiveReferral(string channelItemId, string channelLocationId, string referralInfo, string userName)], Detail: Procedure or function 'SP_CT_MICRO_REFERRAL_ACTIVE' expects parameter '@CHANNEL_ITEM_ID', which was not supplied.
+

@@ -1,0 +1,12 @@
+
+1. Modify Class and functions:
+
+- add new property in class [bl_customer_lead]
+	- ApiUser
+- create new class [Channel_Item_Config]
+- Create new class [ChannelItemUserConfig]
+- modify funcation [GetCustomerLeadByLeadID(string LEAD_ID)] in class [da_customer_lead] by adding value to property ApiUser
+
+
+2. Modify Datable
+- Modify store procedure SP_CT_CUSTOMER_LEAD_GET_BY_LEAD_ID by adding new field [Api_User]

@@ -1,0 +1,140 @@
+
+17:26:27   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [da_micro_policy_prefix => GetLastPolicyPrefix()], Detail: Procedure or function 'SP_CT_MICRO_POLICY_PREFIX_GET_LAST_PREFIX' expects parameter '@PRODUCT_ID', which was not supplied.
+
+17:27:22   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [da_micro_policy_prefix => GetLastPolicyPrefix()], Detail: Procedure or function 'SP_CT_MICRO_POLICY_PREFIX_GET_LAST_PREFIX' expects parameter '@PRODUCT_ID', which was not supplied.
+
+17:27:27   [maneth.som]   Error function [Execute] in class[DB] execute by [da_micro_policy=>SavePolicy(bl_micro_policy POLICY)], Detail: Violation of PRIMARY KEY constraint 'PK_CT_MICRO_POLICY'. Cannot insert duplicate key in object 'dbo.CT_MICRO_POLICY'. The duplicate key value is (1).
+The statement has been terminated.
+
+17:31:15   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [da_micro_policy_prefix => GetLastPolicyPrefix()], Detail: Procedure or function 'SP_CT_MICRO_POLICY_PREFIX_GET_LAST_PREFIX' expects parameter '@PRODUCT_ID', which was not supplied.
+
+17:38:58   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [da_micro_policy_prefix => GetLastPolicyPrefix()], Detail: Procedure or function 'SP_CT_MICRO_POLICY_PREFIX_GET_LAST_PREFIX' expects parameter '@PRODUCT_ID', which was not supplied.
+
+17:39:04   [maneth.som]   Error function [Execute] in class[DB] execute by [da_micro_policy=>SavePolicy(bl_micro_policy POLICY)], Detail: Violation of PRIMARY KEY constraint 'PK_CT_MICRO_POLICY'. Cannot insert duplicate key in object 'dbo.CT_MICRO_POLICY'. The duplicate key value is (1).
+The statement has been terminated.
+
+17:42:36   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [da_micro_policy_prefix => GetLastPolicyPrefix()], Detail: Procedure or function 'SP_CT_MICRO_POLICY_PREFIX_GET_LAST_PREFIX' expects parameter '@PRODUCT_ID', which was not supplied.
+
+17:44:45   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [da_micro_policy_prefix => GetLastPolicyPrefix()], Detail: Procedure or function 'SP_CT_MICRO_POLICY_PREFIX_GET_LAST_PREFIX' expects parameter '@PRODUCT_ID', which was not supplied.
+
+17:44:49   [maneth.som]   Error function [Execute] in class[DB] execute by [da_micro_policy=>SavePolicy(bl_micro_policy POLICY)], Detail: Violation of PRIMARY KEY constraint 'PK_CT_MICRO_POLICY'. Cannot insert duplicate key in object 'dbo.CT_MICRO_POLICY'. The duplicate key value is (1).
+The statement has been terminated.
+
+17:49:44   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [da_micro_policy_prefix => GetLastPolicyPrefix()], Detail: Procedure or function 'SP_CT_MICRO_POLICY_PREFIX_GET_LAST_PREFIX' expects parameter '@PRODUCT_ID', which was not supplied.
+
+17:51:19   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [da_micro_policy_prefix => GetLastPolicyPrefix()], Detail: Procedure or function 'SP_CT_MICRO_POLICY_PREFIX_GET_LAST_PREFIX' expects parameter '@PRODUCT_ID', which was not supplied.
+
+17:51:20   [maneth.som]   Error function [Execute] in class[DB] execute by [da_micro_policy=>SavePolicy(bl_micro_policy POLICY)], Detail: Violation of PRIMARY KEY constraint 'PK_CT_MICRO_POLICY'. Cannot insert duplicate key in object 'dbo.CT_MICRO_POLICY'. The duplicate key value is (1).
+The statement has been terminated.
+
+18:29:47   [maneth.som]   Error function [Execute] in class[DB] execute by [da_micro_policy=>SavePolicy(bl_micro_policy POLICY)], Detail: Violation of PRIMARY KEY constraint 'PK_CT_MICRO_POLICY'. Cannot insert duplicate key in object 'dbo.CT_MICRO_POLICY'. The duplicate key value is (CERRB25000088).
+The statement has been terminated.
+
+18:40:09   [maneth.som]   Error function [Execute] in class[DB] execute by [da_micro_policy=>SavePolicy(bl_micro_policy POLICY)], Detail: Violation of PRIMARY KEY constraint 'PK_CT_MICRO_POLICY'. Cannot insert duplicate key in object 'dbo.CT_MICRO_POLICY'. The duplicate key value is (CERRB25000088).
+The statement has been terminated.
+
+18:53:37   [maneth.som]   Error function [Execute] in class[DB] execute by [da_micro_policy=>SavePolicy(bl_micro_policy POLICY)], Detail: Violation of PRIMARY KEY constraint 'PK_CT_MICRO_POLICY'. Cannot insert duplicate key in object 'dbo.CT_MICRO_POLICY'. The duplicate key value is (CERRB25000088).
+The statement has been terminated.
+
+19:33:35   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:33:35   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:33:36   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:33:36   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:33:37   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:33:37   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:33:38   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:33:38   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:38:34   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:38:35   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:38:35   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:38:35   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:38:36   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:38:36   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:38:37   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:38:37   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:44:00   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:44:00   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:44:57   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:45:00   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:45:01   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:46:21   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:46:24   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:46:24   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+19:53:48   [maneth.som]   Error function [Execute] in class[DB] execute by [da_micro_policy_benificiary.beneficiary_primary=>Save(bl_micro_policy_beneficiary.beneficiary_primary beneficiary))], Detail: Procedure or function 'SP_CT_MICRO_POLICY_BENEFICIARY_PRIMARY_INSERT' expects parameter '@POLICY_ID', which was not supplied.
+
+20:05:31   [maneth.som]   Error function [Execute] in class[DB] execute by [da_micro_policy_benificiary.beneficiary_primary=>Save(bl_micro_policy_beneficiary.beneficiary_primary beneficiary))], Detail: Procedure or function 'SP_CT_MICRO_POLICY_BENEFICIARY_PRIMARY_INSERT' expects parameter '@POLICY_ID', which was not supplied.
+
+20:09:37   [maneth.som]   Error function [Execute] in class[DB] execute by [da_micro_policy_benificiary.beneficiary_primary=>Save(bl_micro_policy_beneficiary.beneficiary_primary beneficiary))], Detail: Procedure or function 'SP_CT_MICRO_POLICY_BENEFICIARY_PRIMARY_INSERT' expects parameter '@POLICY_ID', which was not supplied.
+
+20:13:15   []   Error function[GetApplicationByte(string applicationId, string applicationType)] in class [Certificate], detail:An error occurred during local report processing.=>   at Microsoft.Reporting.WebForms.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.WebForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   at Microsoft.Reporting.WebForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, String& mimeType, String& encoding, String& fileNameExtension, String[]& streams, Warning[]& warnings)
+   at Microsoft.Reporting.WebForms.LocalReport.Render(String format, String deviceInfo, PageCountMode pageCountMode, String& mimeType, String& encoding, String& fileNameExtension, String[]& streams, Warning[]& warnings)
+   at Microsoft.Reporting.WebForms.Report.Render(String format, String deviceInfo, String& mimeType, String& encoding, String& fileNameExtension, String[]& streams, Warning[]& warnings)
+   at Certificate.GetApplicationBytes2(String applicationId, String applicationType) in d:\SYSTEM\RAKSMEY\Clife-WDL\App_Code\Services\Certificate.cs:line 390
+
+20:19:54   []   Error function[GetApplicationByte(string applicationId, string applicationType)] in class [Certificate], detail:An error occurred during local report processing.=>   at Microsoft.Reporting.WebForms.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.WebForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   at Microsoft.Reporting.WebForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, String& mimeType, String& encoding, String& fileNameExtension, String[]& streams, Warning[]& warnings)
+   at Microsoft.Reporting.WebForms.LocalReport.Render(String format, String deviceInfo, PageCountMode pageCountMode, String& mimeType, String& encoding, String& fileNameExtension, String[]& streams, Warning[]& warnings)
+   at Microsoft.Reporting.WebForms.Report.Render(String format, String deviceInfo, String& mimeType, String& encoding, String& fileNameExtension, String[]& streams, Warning[]& warnings)
+   at Certificate.GetApplicationBytes2(String applicationId, String applicationType) in d:\SYSTEM\RAKSMEY\Clife-WDL\App_Code\Services\Certificate.cs:line 390
+
+20:21:24   []   Error function[GetApplicationByte(string applicationId, string applicationType)] in class [Certificate], detail:An error occurred during local report processing.=>   at Microsoft.Reporting.WebForms.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.WebForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   at Microsoft.Reporting.WebForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, String& mimeType, String& encoding, String& fileNameExtension, String[]& streams, Warning[]& warnings)
+   at Microsoft.Reporting.WebForms.LocalReport.Render(String format, String deviceInfo, PageCountMode pageCountMode, String& mimeType, String& encoding, String& fileNameExtension, String[]& streams, Warning[]& warnings)
+   at Microsoft.Reporting.WebForms.Report.Render(String format, String deviceInfo, String& mimeType, String& encoding, String& fileNameExtension, String[]& streams, Warning[]& warnings)
+   at Certificate.GetApplicationBytes2(String applicationId, String applicationType) in d:\SYSTEM\RAKSMEY\Clife-WDL\App_Code\Services\Certificate.cs:line 390
+
+20:29:08   []   Error function[GetApplicationByte(string applicationId, string applicationType)] in class [Certificate], detail:An error occurred during local report processing.=>   at Microsoft.Reporting.WebForms.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.WebForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   at Microsoft.Reporting.WebForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, String& mimeType, String& encoding, String& fileNameExtension, String[]& streams, Warning[]& warnings)
+   at Microsoft.Reporting.WebForms.LocalReport.Render(String format, String deviceInfo, PageCountMode pageCountMode, String& mimeType, String& encoding, String& fileNameExtension, String[]& streams, Warning[]& warnings)
+   at Microsoft.Reporting.WebForms.Report.Render(String format, String deviceInfo, String& mimeType, String& encoding, String& fileNameExtension, String[]& streams, Warning[]& warnings)
+   at Certificate.GetApplicationBytes2(String applicationId, String applicationType) in d:\SYSTEM\RAKSMEY\Clife-WDL\App_Code\Services\Certificate.cs:line 390
+
+20:30:17   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+20:30:19   [maneth.som]   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+20:33:46   []   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+20:33:46   []   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+20:33:48   []   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+20:33:48   []   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+20:33:50   []   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+20:33:50   []   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+20:33:51   []   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+
+20:33:52   []   Error function [GetData(string connection_string, string procedure_name, string[,] parameters, string function_name)] in class [DB] called by [bl_micro_policy => GetLastSEQ()], Detail: Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+

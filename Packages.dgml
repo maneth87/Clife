@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="D:\maneth\Developped Project\updated v11-family protection\CLIFESYSTEM-Last_SVN\" Label="D:\...\CLIFESYSTEM-Last_SVN\" Category="Project" />
+    <Node Id="FubarCoder.RestSharp.Portable 3.3.0" Label="FubarCoder.RestSharp.Portable 3.3.0" Category="Package" />
+    <Node Id="FubarCoder.RestSharp.Portable.Core 3.3.0" Label="FubarCoder.RestSharp.Portable.Core 3.3.0" Category="Package" />
+    <Node Id="FubarCoder.RestSharp.Portable.HttpClient 3.3.0" Label="FubarCoder.RestSharp.Portable.HttpClient 3.3.0" Category="Package" />
+    <Node Id="Newtonsoft.Json 7.0.1" Label="Newtonsoft.Json 7.0.1" Category="Package" />
+    <Node Id="NReco.PdfGenerator 1.1.14" Label="NReco.PdfGenerator 1.1.14" Category="Package" />
+  </Nodes>
+  <Links>
+    <Link Source="FubarCoder.RestSharp.Portable 3.3.0" Target="FubarCoder.RestSharp.Portable.HttpClient 3.3.0" Category="Package Dependency" />
+    <Link Source="FubarCoder.RestSharp.Portable.Core 3.3.0" Target="Newtonsoft.Json 7.0.1" Category="Package Dependency" />
+    <Link Source="FubarCoder.RestSharp.Portable.Core 3.3.0" Target="Newtonsoft.Json 7.0.1" Category="Package Dependency" />
+    <Link Source="FubarCoder.RestSharp.Portable.HttpClient 3.3.0" Target="FubarCoder.RestSharp.Portable.Core 3.3.0" Category="Package Dependency" />
+    <Link Source="FubarCoder.RestSharp.Portable.HttpClient 3.3.0" Target="FubarCoder.RestSharp.Portable.Core 3.3.0" Category="Package Dependency" />
+    <Link Source="FubarCoder.RestSharp.Portable.HttpClient 3.3.0" Target="FubarCoder.RestSharp.Portable.Core 3.3.0" Category="Package Dependency" />
+    <Link Source="FubarCoder.RestSharp.Portable.HttpClient 3.3.0" Target="FubarCoder.RestSharp.Portable.Core 3.3.0" Category="Package Dependency" />
+    <Link Source="FubarCoder.RestSharp.Portable.HttpClient 3.3.0" Target="FubarCoder.RestSharp.Portable.Core 3.3.0" Category="Package Dependency" />
+    <Link Source="FubarCoder.RestSharp.Portable.HttpClient 3.3.0" Target="FubarCoder.RestSharp.Portable.Core 3.3.0" Category="Package Dependency" />
+    <Link Source="FubarCoder.RestSharp.Portable.HttpClient 3.3.0" Target="FubarCoder.RestSharp.Portable.Core 3.3.0" Category="Package Dependency" />
+    <Link Source="FubarCoder.RestSharp.Portable.HttpClient 3.3.0" Target="FubarCoder.RestSharp.Portable.Core 3.3.0" Category="Package Dependency" />
+    <Link Source="FubarCoder.RestSharp.Portable.HttpClient 3.3.0" Target="FubarCoder.RestSharp.Portable.Core 3.3.0" Category="Package Dependency" />
+    <Link Source="D:\maneth\Developped Project\updated v11-family protection\CLIFESYSTEM-Last_SVN\" Target="FubarCoder.RestSharp.Portable 3.3.0" Category="Installed Package" />
+    <Link Source="D:\maneth\Developped Project\updated v11-family protection\CLIFESYSTEM-Last_SVN\" Target="NReco.PdfGenerator 1.1.14" Category="Installed Package" />
+  </Links>
+  <Categories>
+    <Category Id="Project" />
+    <Category Id="Package" />
+  </Categories>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>

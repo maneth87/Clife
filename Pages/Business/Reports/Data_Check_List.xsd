@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Data_Check_List" targetNamespace="http://tempuri.org/Data_Check_List.xsd" xmlns:mstns="http://tempuri.org/Data_Check_List.xsd" xmlns="http://tempuri.org/Data_Check_List.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="cLifeDB_newConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="cLifeDB_newConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.cLifeDB_newConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_Data_Check_List_Personal_DetailTableAdapter" Name="V_Data_Check_List_Personal_Detail">
+            <MainSource>
+              <DbSource ConnectionRef="cLifeDB_newConnectionString (Web.config)" DbObjectName="cLifeDB_new.dbo.V_Data_Check_List_Personal_Detail" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT App_Register_ID, App_Number, Life_Insure_Country, Life_Insure_ID_Card, Life_Insure_First_Name, Life_Insure_Last_Name, Life_Insure_Khmer_First_Name, Life_Insure_khmer_Last_Name, Life_Insure_Gender, Age_Insure, Life_Insure_Birth_Date, Owner_Insure_Country, Owner_Insure_ID_Card, Owner_First_Name, Owner_Last_Name, Owner_Khmer_First_Name, Owner_khmer_Last_Name, Owner_Gender, Owner_Birth_Date, Created_By, Sale_Agent_ID, Agent_Name, Life_Insure_Address1, Life_Insure_Address2, Owner_Address1, Owner_Address2, Life_Insure_Mobile_Phone1, Owner_Mobile_Phone1, Pay_Mode, Assure_Year, Pay_Year, Full_Name, Relationship_Khmer, Relationship, Percentage FROM dbo.V_Data_Check_List_Personal_Detail</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="App_Register_ID" DataSetColumn="App_Register_ID" />
+              <Mapping SourceColumn="App_Number" DataSetColumn="App_Number" />
+              <Mapping SourceColumn="Life_Insure_Country" DataSetColumn="Life_Insure_Country" />
+              <Mapping SourceColumn="Life_Insure_ID_Card" DataSetColumn="Life_Insure_ID_Card" />
+              <Mapping SourceColumn="Life_Insure_First_Name" DataSetColumn="Life_Insure_First_Name" />
+              <Mapping SourceColumn="Life_Insure_Last_Name" DataSetColumn="Life_Insure_Last_Name" />
+              <Mapping SourceColumn="Life_Insure_Khmer_First_Name" DataSetColumn="Life_Insure_Khmer_First_Name" />
+              <Mapping SourceColumn="Life_Insure_khmer_Last_Name" DataSetColumn="Life_Insure_khmer_Last_Name" />
+              <Mapping SourceColumn="Life_Insure_Gender" DataSetColumn="Life_Insure_Gender" />
+              <Mapping SourceColumn="Age_Insure" DataSetColumn="Age_Insure" />
+              <Mapping SourceColumn="Life_Insure_Birth_Date" DataSetColumn="Life_Insure_Birth_Date" />
+              <Mapping SourceColumn="Owner_Insure_Country" DataSetColumn="Owner_Insure_Country" />
+              <Mapping SourceColumn="Owner_Insure_ID_Card" DataSetColumn="Owner_Insure_ID_Card" />
+              <Mapping SourceColumn="Owner_First_Name" DataSetColumn="Owner_First_Name" />
+              <Mapping SourceColumn="Owner_Last_Name" DataSetColumn="Owner_Last_Name" />
+              <Mapping SourceColumn="Owner_Khmer_First_Name" DataSetColumn="Owner_Khmer_First_Name" />
+              <Mapping SourceColumn="Owner_khmer_Last_Name" DataSetColumn="Owner_khmer_Last_Name" />
+              <Mapping SourceColumn="Owner_Gender" DataSetColumn="Owner_Gender" />
+              <Mapping SourceColumn="Owner_Birth_Date" DataSetColumn="Owner_Birth_Date" />
+              <Mapping SourceColumn="Created_By" DataSetColumn="Created_By" />
+              <Mapping SourceColumn="Sale_Agent_ID" DataSetColumn="Sale_Agent_ID" />
+              <Mapping SourceColumn="Agent_Name" DataSetColumn="Agent_Name" />
+              <Mapping SourceColumn="Life_Insure_Address1" DataSetColumn="Life_Insure_Address1" />
+              <Mapping SourceColumn="Life_Insure_Address2" DataSetColumn="Life_Insure_Address2" />
+              <Mapping SourceColumn="Owner_Address1" DataSetColumn="Owner_Address1" />
+              <Mapping SourceColumn="Owner_Address2" DataSetColumn="Owner_Address2" />
+              <Mapping SourceColumn="Life_Insure_Mobile_Phone1" DataSetColumn="Life_Insure_Mobile_Phone1" />
+              <Mapping SourceColumn="Owner_Mobile_Phone1" DataSetColumn="Owner_Mobile_Phone1" />
+              <Mapping SourceColumn="Pay_Mode" DataSetColumn="Pay_Mode" />
+              <Mapping SourceColumn="Assure_Year" DataSetColumn="Assure_Year" />
+              <Mapping SourceColumn="Pay_Year" DataSetColumn="Pay_Year" />
+              <Mapping SourceColumn="Full_Name" DataSetColumn="Full_Name" />
+              <Mapping SourceColumn="Relationship_Khmer" DataSetColumn="Relationship_Khmer" />
+              <Mapping SourceColumn="Relationship" DataSetColumn="Relationship" />
+              <Mapping SourceColumn="Percentage" DataSetColumn="Percentage" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_Data_Check_List_Premium_DetailTableAdapter" Name="V_Data_Check_List_Premium_Detail">
+            <MainSource>
+              <DbSource ConnectionRef="cLifeDB_newConnectionString (Web.config)" DbObjectName="cLifeDB_new.dbo.V_Data_Check_List_Premium_Detail" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT App_Register_ID, uw_life_product_id, Product_ID, system_sum_insure, user_premium, system_premium, User_premium_Discount, Original_Amount, Rounded_Amount, EM_Amount, EM_Premium, Rider_Type, [Level] FROM dbo.V_Data_Check_List_Premium_Detail</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="App_Register_ID" DataSetColumn="App_Register_ID" />
+              <Mapping SourceColumn="uw_life_product_id" DataSetColumn="uw_life_product_id" />
+              <Mapping SourceColumn="Product_ID" DataSetColumn="Product_ID" />
+              <Mapping SourceColumn="system_sum_insure" DataSetColumn="system_sum_insure" />
+              <Mapping SourceColumn="user_premium" DataSetColumn="user_premium" />
+              <Mapping SourceColumn="system_premium" DataSetColumn="system_premium" />
+              <Mapping SourceColumn="User_premium_Discount" DataSetColumn="User_premium_Discount" />
+              <Mapping SourceColumn="Original_Amount" DataSetColumn="Original_Amount" />
+              <Mapping SourceColumn="Rounded_Amount" DataSetColumn="Rounded_Amount" />
+              <Mapping SourceColumn="EM_Amount" DataSetColumn="EM_Amount" />
+              <Mapping SourceColumn="EM_Premium" DataSetColumn="EM_Premium" />
+              <Mapping SourceColumn="Rider_Type" DataSetColumn="Rider_Type" />
+              <Mapping SourceColumn="Level" DataSetColumn="Level" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Data_Check_List" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_Data_Check_List_Personal_Detail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="App_Register_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="App_Number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Life_Insure_Country">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Life_Insure_ID_Card">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Life_Insure_First_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Life_Insure_Last_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Life_Insure_Khmer_First_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Life_Insure_khmer_Last_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Life_Insure_Gender" msdata:ReadOnly="true" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Age_Insure" type="xs:int" />
+              <xs:element name="Life_Insure_Birth_Date" type="xs:dateTime" />
+              <xs:element name="Owner_Insure_Country">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner_Insure_ID_Card">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner_First_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner_Last_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner_Khmer_First_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner_khmer_Last_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner_Gender" msdata:ReadOnly="true" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner_Birth_Date" type="xs:dateTime" />
+              <xs:element name="Created_By">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sale_Agent_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Agent_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Life_Insure_Address1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Life_Insure_Address2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner_Address1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner_Address2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Life_Insure_Mobile_Phone1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner_Mobile_Phone1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pay_Mode" type="xs:int" />
+              <xs:element name="Assure_Year" type="xs:int" />
+              <xs:element name="Pay_Year" type="xs:int" />
+              <xs:element name="Full_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Relationship_Khmer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Relationship">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Percentage" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V_Data_Check_List_Premium_Detail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="App_Register_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="uw_life_product_id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="system_sum_insure" type="xs:double" />
+              <xs:element name="user_premium" type="xs:double" />
+              <xs:element name="system_premium" type="xs:double" />
+              <xs:element name="User_premium_Discount" type="xs:double" minOccurs="0" />
+              <xs:element name="Original_Amount" type="xs:double" minOccurs="0" />
+              <xs:element name="Rounded_Amount" type="xs:double" minOccurs="0" />
+              <xs:element name="EM_Amount" type="xs:double" />
+              <xs:element name="EM_Premium" type="xs:double" />
+              <xs:element name="Rider_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="34" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Level" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

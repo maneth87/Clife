@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_micro_application" targetNamespace="http://tempuri.org/ds_micro_application.xsd" xmlns:mstns="http://tempuri.org/ds_micro_application.xsd" xmlns="http://tempuri.org/ds_micro_application.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_micro_application" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_micro_application_form">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="APPLICATION_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="APPLICATION_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="APPLICATION_CUSTOMER_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="APPLICATION_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CHANNEL_ITEM_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="CHANNEL_LOCATION_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="CHANNEL_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="OFFICE_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="OFFICE_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="SALE_AGENT_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="FULL_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="FULL_NAME_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="FIRST_NAME_IN_ENGLISH" type="xs:string" minOccurs="0" />
+              <xs:element name="LAST_NAME_IN_ENGLISH" type="xs:string" minOccurs="0" />
+              <xs:element name="FIRST_NAME_IN_KHMER" type="xs:string" minOccurs="0" />
+              <xs:element name="LAST_NAME_IN_KHMER" type="xs:string" minOccurs="0" />
+              <xs:element name="GENDER" type="xs:string" minOccurs="0" />
+              <xs:element name="DATE_OF_BIRTH" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NATIONALITY" type="xs:string" minOccurs="0" />
+              <xs:element name="MARITAL_STATUS" type="xs:string" minOccurs="0" />
+              <xs:element name="OCCUPATION" type="xs:string" minOccurs="0" />
+              <xs:element name="PHONE_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="HOUSE_NO_EN" type="xs:string" minOccurs="0" />
+              <xs:element name="STREET_NO_EN" type="xs:string" minOccurs="0" />
+              <xs:element name="VILLAGE_EN" type="xs:string" minOccurs="0" />
+              <xs:element name="COMMUNE_EN" type="xs:string" minOccurs="0" />
+              <xs:element name="DISTRICT_EN" type="xs:string" minOccurs="0" />
+              <xs:element name="PROVINCE_EN" type="xs:string" minOccurs="0" />
+              <xs:element name="HOUSE_NO_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="STREET_NO_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="VILLAGE_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="COMMUNE_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="DISTRICT_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="PROVINCE_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="PRODUCT_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="PACKAGE" type="xs:string" minOccurs="0" />
+              <xs:element name="SUM_ASSURE" type="xs:double" minOccurs="0" />
+              <xs:element name="TERM_OF_COVER" type="xs:int" minOccurs="0" />
+              <xs:element name="PAYMENT_PERIOD" type="xs:int" minOccurs="0" />
+              <xs:element name="PAY_MODE" type="xs:string" minOccurs="0" />
+              <xs:element name="PREMIUM" type="xs:double" minOccurs="0" />
+              <xs:element name="ANNUAL_PREMIUM" type="xs:double" minOccurs="0" />
+              <xs:element name="USER_PREMIUM" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTAL_AMOUNT" type="xs:double" minOccurs="0" />
+              <xs:element name="RIDER_PRODUCT_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="RIDER_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="RIDER_SUM_ASSURE" type="xs:double" minOccurs="0" />
+              <xs:element name="RIDER_PREMIUM" type="xs:double" minOccurs="0" />
+              <xs:element name="RIDER_ANNUAL_PREMIUM" type="xs:double" minOccurs="0" />
+              <xs:element name="PRODUCT_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="PRODUCT_NAME_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="RIDER_PRODUCT_NAME_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="RIDER_PRODUCT_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="EMAIL" type="xs:string" minOccurs="0" />
+              <xs:element name="DISCOUNT_AMOUNT" type="xs:double" minOccurs="0" />
+              <xs:element name="RIDER_DISCOUNT_AMOUNT" type="xs:double" minOccurs="0" />
+              <xs:element name="RIDER_TOTAL_AMOUNT" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_micro_cert">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="POLICY_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="POLICY_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="CUSTOMER_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="EFFECTIVE_DATE" msdata:Caption="APPLICATION_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CHANNEL_ITEM_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="CHANNEL_LOCATION_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="CHANNEL_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="MATURITY_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EXPIRY_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SALE_AGENT_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="FULL_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="FULL_NAME_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="FIRST_NAME_IN_ENGLISH" type="xs:string" minOccurs="0" />
+              <xs:element name="LAST_NAME_IN_ENGLISH" type="xs:string" minOccurs="0" />
+              <xs:element name="FIRST_NAME_IN_KHMER" type="xs:string" minOccurs="0" />
+              <xs:element name="LAST_NAME_IN_KHMER" type="xs:string" minOccurs="0" />
+              <xs:element name="GENDER" type="xs:string" minOccurs="0" />
+              <xs:element name="DATE_OF_BIRTH" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NATIONALITY" type="xs:string" minOccurs="0" />
+              <xs:element name="MARITAL_STATUS" type="xs:string" minOccurs="0" />
+              <xs:element name="OCCUPATION" type="xs:string" minOccurs="0" />
+              <xs:element name="PHONE_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="HOUSE_NO_EN" type="xs:string" minOccurs="0" />
+              <xs:element name="STREET_NO_EN" type="xs:string" minOccurs="0" />
+              <xs:element name="VILLAGE_EN" type="xs:string" minOccurs="0" />
+              <xs:element name="COMMUNE_EN" type="xs:string" minOccurs="0" />
+              <xs:element name="DISTRICT_EN" type="xs:string" minOccurs="0" />
+              <xs:element name="PROVINCE_EN" type="xs:string" minOccurs="0" />
+              <xs:element name="HOUSE_NO_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="STREET_NO_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="VILLAGE_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="COMMUNE_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="DISTRICT_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="PROVINCE_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="PRODUCT_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="PACKAGE" type="xs:string" minOccurs="0" />
+              <xs:element name="SUM_ASSURE" type="xs:double" minOccurs="0" />
+              <xs:element name="TERM_OF_COVER" type="xs:int" minOccurs="0" />
+              <xs:element name="PAYMENT_PERIOD" type="xs:int" minOccurs="0" />
+              <xs:element name="PAY_MODE" type="xs:string" minOccurs="0" />
+              <xs:element name="PREMIUM" type="xs:double" minOccurs="0" />
+              <xs:element name="ANNUAL_PREMIUM" type="xs:double" minOccurs="0" />
+              <xs:element name="DISCOUNT_AMOUNT" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTAL_AMOUNT" type="xs:double" minOccurs="0" />
+              <xs:element name="RIDER_PRODUCT_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="RIDER_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="RIDER_SUM_ASSURE" type="xs:double" minOccurs="0" />
+              <xs:element name="RIDER_PREMIUM" type="xs:double" minOccurs="0" />
+              <xs:element name="RIDER_ANNUAL_PREMIUM" type="xs:double" minOccurs="0" />
+              <xs:element name="PRODUCT_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="RIDER_PRODUCT_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="EMAIL" type="xs:string" minOccurs="0" />
+              <xs:element name="CUSTOMER_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="QR_CODE" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="APPROVER_NAME_EN" type="xs:string" minOccurs="0" />
+              <xs:element name="APPROVER_NAME_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="APPROVER_POSITION_EN" type="xs:string" minOccurs="0" />
+              <xs:element name="APPROVER_POSITION_KH" type="xs:string" minOccurs="0" />
+              <xs:element name="APPROVER_SIGNATURE" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="RIDER_DISCOUNT_AMOUNT" type="xs:double" minOccurs="0" />
+              <xs:element name="RIDER_TOTAL_AMOUNT" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_micro_application_form_ben">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="APPLICATION_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="FULL_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="AGE" type="xs:string" minOccurs="0" />
+              <xs:element name="RELATION" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDRESS" type="xs:string" minOccurs="0" />
+              <xs:element name="PERCENTAGE_OF_SHARE" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

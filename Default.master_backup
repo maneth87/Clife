@@ -1,0 +1,388 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Copy of Default.master.cs" Inherits="_Default" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+
+    <%-- stylesheet--%>
+    <link href="App_Themes/style.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/jmenu.css" rel="stylesheet" type="text/css" />
+    <link href="Scripts/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <%-- javascript--%>
+    <script src="Scripts/jquery-1.9.0.min.js"></script>
+    <script src="Scripts/jmenu.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap/js/bootstrap.js"></script>
+    
+
+    <title>Clife System | Landing Page</title>
+
+</head>
+<body>
+    <form id="MainForm" runat="server">
+
+       <div class="nav-login">
+            Welcome <b>
+                <asp:LoginName ID="LgName" runat="server" />
+                !</b>|
+            <asp:LoginStatus ID="LgStatus" runat="server" LogoutAction="RedirectToLoginPage" />&nbsp;
+        </div>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>                            
+                            <li class="parent"><a href="default.aspx">
+                                <span>
+                                    <img src="App_Themes/images/home.png" width="20" height="20" /></span></a>
+                            </li>
+                            <li class="divider-vertical"></li>
+                            <li class="dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Core Data <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                   
+                                    <li class="nav-header">Main</li>
+                                    <li><a href="Pages/CoreData/office_table.aspx"><span>Office</span></a></li>
+                                    <li><a href="Pages/CoreData/employee.aspx"><span>Employee</span></a></li>
+                                    <li><a href="Pages/CoreData/sale_agent.aspx"><span>Sales Agent</span></a></li>
+                                    <li><a href="Pages/CoreData/upload_wing_account.aspx"><span>Wing Account</span></a></li>
+                                    <li class="divider"></li>
+                                    <li class="nav-header">Underwriting</li>
+                                    <li><a href="Pages/CoreData/relationship.aspx"><span>Relationship</span></a></li>
+                                    <li><a href="Pages/CoreData/underwrite_code.aspx"><span>Underwriting Code</span></a></li>
+                                    <li><a href="Pages/CoreData/policy_status_code.aspx"><span>Policy Status Code</span></a></li>
+                                    <li class="divider"></li>
+                                    <li class="nav-header">GTLI</li>
+                                    <li><a href="Pages/GTLI/business.aspx"><span>Business</span></a></li>
+                                    <li><a href="Pages/GTLI/register_company.aspx"><span>Register Company</span></a></li>
+                                    <li><a href="Pages/GTLI/register_plan.aspx"><span>Register Plan</span></a></li>
+                                    <li><a href="Pages/GTLI/edit_contact.aspx"><span>Edit Contact</span></a></li>
+                                    <li class="divider"></li>
+                                    <li class="nav-header">Customer</li>
+                                     <li><a href="Pages/CoreData/customer_info.aspx"><span>Customers Info</span></a></li>
+                                    <li class="divider"></li>
+                                    <li class="nav-header">Provision</li>
+                                    <li><a href="Pages/Products/benefit_payment_clause.aspx"><span>Benefit Payment Clause</span></a></li>
+                                   
+                                </ul>
+                            </li>
+                            <li class="divider-vertical"></li>
+                            <li class="dropdown">
+                               <a data-toggle="dropdown" class="dropdown-toggle" href="#">New Business <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">Individual Policy</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="Pages/Business/application_form.aspx"><span>Application</span></a></li>
+                                            <li><a href="Pages/Business/policy_number_reserve.aspx"><span>Create Reserve Policy Number</span></a></li>
+                                            <%--<li><a href="Pages/Business/application_form_fp.aspx"><span>Application FP New</span></a></li>--%>
+                                            <li><a href="Pages/Business/application_form_fp6.aspx"><span>Application FP New 6</span></a></li>
+                                            <li><a href="Pages/Business/underwriting.aspx"><span>Underwrite</span></a></li>
+                                            <li><a href="Pages/Business/added_rider_list.aspx"><span>Underwrite Add Riders</span></a></li>
+                                            <li><a href="Pages/Business/added_rider_checking_list.aspx"><span>Data Checking List Add Riders</span></a></li>
+                                            <li><a href="Pages/Business/policy_issuance.aspx"><span>Issue Policy</span></a></li>
+                                            <li><a href="Pages/Business/policy_payment_schedule.aspx"><span>Create Policy Payment Schedule</span></a></li>
+                                            <li><a href="Pages/Business/policy_printing.aspx"><span>Print Policy</span></a></li>
+                                            <li><a href="Pages/Business/print_policy_payment_schedule.aspx"><span>Print Policy Payment Schedule</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">GTLI Policy</a>
+                                        <ul class="dropdown-menu">
+                                               <li class="nav-header">New Policy</li>                                 
+                                               <li><a href="Pages/GTLI/register_employee.aspx"><span>Register Policy</span></a></li>  
+                                               <li><a href="Pages/GTLI/gtli_issue_policy.aspx"><span>Issue Policy</span></a></li>   
+                                               <li class="nav-header">Policy Service</li>          
+                                               <li><a href="Pages/GTLI/add_member.aspx"><span>Add Member</span></a></li> 
+                                               <li><a href="Pages/GTLI/resign_member.aspx"><span>Resign Member</span></a></li>                                                
+                                               <li><a href="Pages/GTLI/reconcile.aspx"><span>Reconcile</span></a></li> 
+                                               <li class="nav-header">Print</li>
+                                               <li><a href="Pages/GTLI/gtli_master_list.aspx"><span>Master List</span></a></li>
+                                               <li><a href="Pages/GTLI/created_policy_list.aspx"><span>Policy List</span></a></li>
+                                               <li><a href="Pages/GTLI/add_new_transaction_list.aspx"><span>Added Member List</span></a></li>
+                                               <li><a href="Pages/GTLI/resign_member_transaction_list.aspx"><span>Resigned Member List</span></a></li>
+                                             
+                                        </ul>
+                                    </li> 
+                                     <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">Micro Insurance</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="Pages/Business/banca_customer_lead.aspx"><span>Client Lead</span></a></li>
+                                            <li><a href="Pages/Business/banca_micro_payment_upload.aspx"><span>Upload Payment</span></a></li>
+                                           
+                                        </ul>
+                                    </li>
+                                    <%--<li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">Micro Policy</a>
+                                        <ul class="dropdown-menu">
+                                             <li><a href="Pages/Micro/policy_form.aspx"><span>New Policy</span></a></li>
+                                             <li><a href="Pages/Micro/upload_policies.aspx"><span>Upload Policies</span></a></li>
+                                             <li><a href="Pages/Micro/policy_micro_report.aspx"><span>Policy List Report</span></a></li>
+                                            <li><a href="Pages/Micro/policy_return.aspx"><span>Policy Return Premium</span></a></li>
+                                        </ul>
+                                    </li>  --%>
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">Flexi Term Policy</a>
+                                        <ul class="dropdown-menu">
+                                             <li><a href="Pages/Flexi_Term/upload_policies.aspx"><span>Upload Policies</span></a></li>
+                                             <li><a href="Pages/Flexi_Term/policy_flexi_term_report.aspx"><span>Policy List Report</span></a></li>   
+                                        </ul>
+                                    </li>        
+                                   <%-- <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">WING Account</a>
+                                        <ul class="dropdown-menu">
+                                             <li><a href="Pages/Wing/wing_account.aspx"><span>Issue WING Account</span></a></li>
+                                            <li><a href="Pages/Wing/import_data.aspx"><span>Import New Accounts</span></a></li>
+                                             <li><a href="Pages/Wing/auto_debit.aspx"><span>Auto Debit</span></a></li>
+                                        </ul>
+                                    </li>   --%>
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">Simple One</a>
+                                        <ul class="dropdown-menu">
+                                             <li><a href="Pages/CI/frmCI.aspx"><span>Upload Data</span></a></li>
+                                            <li><a href="Pages/CI/renew.aspx"><span>Renew Policy</span></a></li>
+                                            <li><a href="Pages/CI/TerminateSO.aspx"><span>Terminate Policy</span></a></li>
+                                            <li><a href="Pages/CI/frmSOUnpaid.aspx"><span>Upload Unpaid Policies</span></a></li>
+                                            <li class="dropdown-submenu">
+                                                <a tabindex="-1" href="#">Report</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="Pages/CI/frmCIDetailReport.aspx"><span>Policy Detail</span></a></li>
+                                                     <%-- <li><a href="Pages/CI/frmSOPolicyStatusReport.aspx"><span>Policies Status</span></a></li>--%>
+                                                    <li><a href="Pages/CI/terminated_policy.aspx"><span>Terminated Policy</span></a></li>
+                                                     <li><a href="Pages/CI/frmSOLastPaymentDate.aspx"><span>Last Due Payment</span></a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>     
+                                     <li class="dropdown-submenu">
+                                         <a tabindex="-1" href="#">Wing-AL</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="Pages/Wing/import_data.aspx"><span>Upload New Accounts</span></a></li>
+                                            <li><a href="Pages/Wing/wing_policy_uploaded.aspx"><span>Export uploaded Policies</span></a></li>
+                                            <li><a href="Pages/Wing/wing_register_consent_form.aspx"><span>Upload Consent Form List</span></a></li>
+                                            <li><a href="Pages/Wing/auto_debit.aspx"><span>Upload Auto Debit</span></a></li>
+                                             <li><a href="Pages/CI/TerminateSO.aspx?pro_type=AL"><span>Terminate Policy</span></a></li>
+                                            <li class="dropdown-submenu">
+                                                <a tabindex="-1" href="#">Report</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="Pages/CI/frmCIDetailReport.aspx?pro_type=AL"><span>Policy Detail</span></a></li>
+                                                      <li><a href="Pages/wing/wing_renew_policy_report.aspx"><span>Renew Policies</span></a></li>
+                                                    <li><a href="Pages/CI/terminated_policy.aspx?pro_type=AL"><span>Terminated Policy</span></a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>  
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">First Finance Policy</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="Pages/CL24/detail_report.aspx"><span>Detail Policy</span></a></li>
+                                            <li><a href="Pages/CL24/renewal_premium.aspx"><span>Renewal Premium</span></a></li>
+                                            <li><a href="Pages/CL24/terminate_policy.aspx"><span>Paid OFF Policy</span></a></li>
+                                            <li><a href="Pages/CL24/premium_list.aspx"><span>Premium List</span></a></li>
+                                        </ul>
+                                    </li> 
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">CMK Policy</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="Pages/CMK/Upload_Policy_Cmk.aspx"><span>Upload Policy</span></a></li>
+                                            <li><a href="Pages/CMK/Policy_CMK_Report.aspx"><span>CMK Report List</span></a></li>
+                                            <li><a href="Pages/CMK/Search_Upload_Policy.aspx"><span>Search Upload Premium Report</span></a></li>
+                                            <li><a href="Pages/CMK/Upload_Monthly_Premium.aspx"><span>Upload Monthly Premium</span></a></li>
+                                            <li><a href="Pages/CMK/Premium_List.aspx"><span>Premium List</span></a></li>
+                                           
+                                        </ul>
+                                    </li>  
+                                     <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">Flate Rate</a>
+                                        <ul class="dropdown-menu">
+                                             <%--<li><a href="Pages/Flate_Rate/policy_detail.aspx"><span>Policy</span></a></li>
+                                             <li><a href="Pages/Flate_Rate/approve_policy.aspx"><span>Approve Policy</span></a></li>--%>
+                                            <li><a href="Pages/Flate_Rate/policy_flat.aspx"><span>Policy Flate Rate</span></a></li>
+                                            <li><a href="Pages/Business/policy_payment_schedule.aspx"><span>Create Policy Payment Schedule</span></a></li>
+                                            <li><a href="Pages/Business/policy_printing.aspx"><span>Print Policy</span></a></li>
+                                            <li><a href="Pages/Business/print_policy_payment_schedule.aspx"><span>Print Policy Payment Schedule</span></a></li>
+                                           
+                                        </ul>
+                                    </li>           
+                                </ul>
+                            </li>
+                            <li class="divider-vertical"></li>
+                            <li class="dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Report <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                   <%-- <li><a href="Pages/Reports/report_application.aspx"><span>Application Report</span></a></li>
+                                    <li><a href="Pages/Reports/report_policy.aspx"><span>Policy Report</span></a></li>
+                                    <li><a href="Pages/Micro/policy_micro_report.aspx"><span>Micro Policy</span></a></li>
+                                    <li><a href="Pages/Reports/report_gtli_policy.aspx"><span>GTLI Policy</span></a></li>
+                                    <li><a href="Pages/Reports/report_gtli_policy_gross_premium.aspx"><span>GTLI Gross Premium</span></a></li>
+                                    <li><a href="Pages/Reports/report_policy_complete.aspx"><span>Complete Report</span></a></li>
+                                    <li><a href="Pages/Wing/report_wing_account.aspx"><span>WING Account Report</span></a></li>--%>
+
+
+                                    <li><a href="Pages/Reports/report_application.aspx"><span>Application</span></a></li>
+                                           <li class="dropdown-submenu">
+                                         <a  href="#">Micro Insurance</a>
+                                         <ul class="dropdown-menu">
+                                             <li><a href="Pages/Reports/micro_policy_insurance_rp.aspx"><span>Policy Insurance</span></a></li>
+                                             <li><a href="Pages/Reports/mirco_customer_lead_rp.aspx"><span>Client Lead</span></a></li>
+                                             <li><a href="Pages/Reports/micro_banca_insurance_booking_rp.aspx"><span>Insurance Booking</span></a></li>
+                                             <li><a href="Pages/Reports/micro_banca_payment.aspx"><span>Payment List</span></a></li>
+                                        
+                                         </ul>
+                                     </li>
+<%--                                <li><a href="Pages/Reports/report_policy.aspx"><span>Individual Policy</span></a></li>--%>
+                                    <li><a href="Pages/Reports/report_policy_complete.aspx"><span>Individual Policy</span></a></li>
+                                    <li><a href="Pages/Reports/report_gtli_policy.aspx"><span>GTLI Policy</span></a></li>
+                                    <li><a href="Pages/Reports/report_gtli_policy_gross_premium.aspx"><span>GTLI Premium</span></a></li>                                    
+                                    <li><a href="Pages/Wing/report_wing_account.aspx"><span>WING Account</span></a></li>
+                                    
+                              
+
+                                     <%--Premium report module--%>
+                                    <li class="dropdown-submenu">
+                                         <a  href="#">Premium</a>
+                                         <ul class="dropdown-menu">
+                                             <li>
+                                                 <a href="Pages/Reports/premium_acc_product_report.aspx"><span>Premium Report Accounting</span></a></li>
+                                             <li><a href="Pages/Reports/pma_product_premium_report.aspx"><span>Premium Report PMA</span></a></li>
+                                             <li><a href="Pages/Commission/commission_report.aspx"><span>Commission</span></a></li>
+                                         </ul>
+                                     </li>
+
+                                     <%--Sales report module--%>
+                                    <li class="dropdown-submenu">
+                                         <a  href="#">Sales</a>
+                                         <ul class="dropdown-menu">
+                                             <li><a href="Pages/Reports/sale_app_by_status_report.aspx"><span>Application Status</span></a></li>
+                                             <li><a href="Pages/Reports/sale_by_agent_report.aspx"><span>Sales Performance</span></a></li>
+                                             <li><a href="Pages/Reports/sale_policy.aspx"><span>Sales Policies</span></a></li>
+                                         </ul>
+                                     </li>
+                                    <li><a href="Pages/Reports/policy_commission.aspx"><span>Export Policies</span></a></li>
+                                   <li><a href="Pages/Reports/new_policy_in_month.aspx"><span>New Policy In Month</span></a></li>
+                                </ul>
+                                 
+                            </li>
+
+                            
+
+                            <%--<li class="divider-vertical"></li>
+                            <li class="dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Accounting <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Pages/Accounting/policy_payment.aspx"><span>Policy Payment</span></a></li>
+                                </ul>
+                            </li>--%>
+
+
+                            <li class="divider-vertical"></li>
+                            <li class="dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Policy Service <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Pages/Policy/calc_policy_lap.aspx"><span>Calculate Policy Lap</span></a></li>
+                                    <li><a href="Pages/Reports/report_policy_lapsed.aspx"><span>Policy Status Check</span></a></li>
+                                    <li><a href="Pages/Reports/update_policy_status.aspx"><span>Policy Status Amendment</span></a></li>
+                                    <li><a href="Pages/Reports/report_policy_payment.aspx"><span>Policy Payment History</span></a></li>
+                                    <li><a href="Pages/Reports/report_policy_reinstatement.aspx"><span>Policy Reinstatement</span></a></li>
+                                </ul>
+                            </li>
+                             <li class="divider-vertical"></li>
+                            <li class="dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Card<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Pages/Card/barcode.aspx"><span>Barcode</span></a></li>
+                                     <li><a href="Pages/Card/policy_card.aspx"><span>Policy Card</span></a></li>
+                                </ul>
+                            </li>
+                             <li class="divider-vertical"></li>
+                            <li class="dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Broadcast Message<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                   <%-- <li><a href="Pages/BroadCastMessage/Upload_BroadCast_Message_Number.aspx"><span>Send Message</span></a></li>
+                                    <li><a href="Pages/BroadCastMessage/MessageIn.aspx"><span>Message In</span></a></li>
+                                    <li><a href="Pages/BroadCastMessage/MessageHistory.aspx"><span>Message History</span></a></li>
+                                    <li class ="dropdown-submenu">
+                                        <a href="#">Settings</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="Pages/BroadCastMessage/SimCardGateway.aspx"><span>Change Message Gateway</span></a></li>
+                                        </ul>
+                                    </li>--%>
+
+                                    <li><a href="Pages/BroadCastMessage/MessageHistoryNew.aspx"><span>Message History</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="divider-vertical"></li>
+                            <li class="dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Setting <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Pages/Setting/change_password.aspx"><span>Change Password</span></a></li>
+                                </ul>
+                            </li>
+							<li class="divider-vertical"></li>	
+								 <%--Thary manage user--%>
+
+                            <li class="dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Admin<b class="caret"></b></a>
+                                <ul class="dropdown-menu"  runat="server" id="admin">
+                                    <li><a href="Pages/Admin/add_role.aspx"><span>Manage Role</span></a></li>
+                                    <li><a href="Pages/Admin/manage_user.aspx"><span>Manage User</span></a></li>
+                                    <li><a href="Pages/Admin/page.aspx"><span>Pages Permission</span></a></li>
+                                    <li><a href="Pages/Admin/log_detail.aspx"><span>System Log Detail</span></a></li>
+                                    <li><a href="Pages/Admin/generate_guid.aspx"><span>Guid Generator</span></a></li>
+                                    <li><a href="Pages/Admin/user_access.aspx" runat="server"><span>User Access</span></a></li>
+                                </ul>
+                            </li>
+								
+                            <li class="divider-vertical"></li>
+                           <%-- <li class="dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Help <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href=""><span>System Manual</span></a></li>
+                                    <li><a href=""><span>User Manual</span></a></li>
+                                </ul>
+                            </li>--%>
+
+
+                        </ul>
+                    </div>
+                    <!-- /.nav-collapse -->
+                </div>
+            </div>
+            <!-- /navbar-inner -->
+        </div>
+
+
+        <div class="content-container">
+            <div class="content-container-inner">
+                <div class="content-main">
+                    <asp:ContentPlaceHolder ID="Toolbar" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    <asp:ContentPlaceHolder ID="Main" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="nav-footer">
+
+                &copy; <% Response.Write(System.DateTime.Now.Year.ToString()); %> - Cambodia Life Insurance Plc.</div>
+        </div>
+    </form>
+
+   
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Content.master" AutoEventWireup="true" CodeFile="created_policy_list.aspx.cs" Inherits="Pages_GTLI_created_policy_list" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="Toolbar" runat="Server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="True"></asp:ScriptManager>
+    <link href="../../Scripts/themes/base/jquery.ui.all.css" rel="stylesheet" />
+
+    <%--Auto Complete--%>
+    <script src="../../Scripts/ui/jquery.ui.core.js"></script>
+    <script src="../../Scripts/ui/jquery.ui.widget.js"></script>
+    <script src="../../Scripts/ui/jquery.ui.position.js"></script>
+    <script src="../../Scripts/ui/jquery.ui.autocomplete.js"></script>
+    <script src="../../Scripts/ui/jquery.ui.menu.js"></script>
+    <script src="../../Scripts/ui/jquery.ui.datepicker.js"></script>
+    <%--End Auto Complete--%>
+
+    <ul class="toolbar">
+        <li>
+            <!-- Button Search-->
+            <input type="button"  onclick="ShowSearchForm();" style="background: url('../../App_Themes/functions/search.png') no-repeat; border: none; height: 40px; width: 90px;" />      
+        </li>
+    </ul>
+    <style>
+         .ui-autocomplete {
+            z-index: 5000;
+        }
+    </style>
+    <script type="text/javascript">
+        PageMethods.GetCompanyName(function (results) {
+
+            $("#txtCompanyName").autocomplete({
+                source: function (request, response) {
+                    var matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex(request.term), "i");
+                    response($.grep(results, function (item) {
+                        return matcher.test(item);
+                    }));
+                }
+            });
+        });
+
+        //From date picker
+        $(function () {
+            $("#MainContent_txtFrom").datepicker({ dateFormat: 'dd/mm/yy' });
+        });
+
+        //To date picker
+        $(function () {
+            $("#MainContent_txtTo").datepicker({ dateFormat: 'dd/mm/yy' });
+        });
+
+        //Show Search Form
+        function ShowSearchForm() {
+            $("#txtCompanyName").val("");
+
+            $("#myModalSearchCreatedList").modal("show");
+        }
+    </script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Main" runat="Server">
+    <%-- Form Design Section--%>
+    <br />
+    <br />
+    <br />
+     
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Created Policy List</h3>
+        </div>
+        <div class="panel-body">
+            <%--Content--%>
+            <asp:Label ID="lblCount" runat="server"></asp:Label>
+            <br />
+            <div>
+                <asp:GridView Width="100%" ID="gvGTLI" runat="server" AutoGenerateColumns="False" DataKeyNames="GTLI_Premium_ID" BorderColor="#B9B9B9" AllowPaging="True" PageSize="30" OnPageIndexChanged="gvGTLI_PageIndexChanged" OnPageIndexChanging="gvGTLI_PageIndexChanging" OnRowCommand="gvGTLI_RowCommand" OnRowDataBound="gvGTLI_RowDataBound">
+                    <Columns>
+                        <asp:TemplateField>
+                            <HeaderTemplate>
+                                No.
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <%# Container.DataItemIndex + 1 %>
+                            </ItemTemplate>
+                            <HeaderStyle HorizontalAlign="Center" />
+
+                            <ItemStyle Width="50px" HorizontalAlign="Center" />
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="GTLI_Plan" HeaderText="Plan" SortExpression="GTLI_Plan" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-Width="50">
+                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle"></HeaderStyle>
+
+                            <ItemStyle Width="50px" HorizontalAlign="Center"></ItemStyle>
+                        </asp:BoundField>
+                        <asp:BoundField DataField="Transaction_Staff_Number" HeaderText="Employees" SortExpression="Transaction_Staff_Number" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-Width="70">
+                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle"></HeaderStyle>
+
+                            <ItemStyle Width="70px" HorizontalAlign="Center"></ItemStyle>
+                        </asp:BoundField>
+                        <asp:BoundField DataField="Policy_Number" HeaderText="Policy Number" SortExpression="Policy_Number" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-Width="130">
+                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle"></HeaderStyle>
+
+                            <ItemStyle Width="130px"></ItemStyle>
+                        </asp:BoundField>
+                        <asp:BoundField DataField="Effective_Date" HeaderText="Effective Date" SortExpression="Effective_Date" DataFormatString="{0:d-MMM-yyyy}" HtmlEncode="false" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle" ItemStyle-Width="80">
+                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle"></HeaderStyle>
+
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="100px"></ItemStyle>
+                        </asp:BoundField>
+                        <asp:TemplateField HeaderText="Expiry Date">
+                            <ItemTemplate>
+                                <asp:Label ID="lblExpiryDate" runat="server" Text='<%# Eval("Expiry_Date", "{0:dd-MMM-yyyy}")%>'></asp:Label>
+                            </ItemTemplate>
+
+                            <HeaderStyle HorizontalAlign="Center" />
+
+                            <ItemStyle Width="100px" HorizontalAlign="Center" />
+
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="Sum_Insured" HeaderText="Sum Assured" SortExpression="Sum_Insured" DataFormatString="{0:C0}" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle"></HeaderStyle>
+                            <ItemStyle HorizontalAlign="Right" Width="130" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="Life_Premium" HeaderText="Life Premium" SortExpression="Life_Premium" DataFormatString="{0:C2}" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle"></HeaderStyle>
+                            <ItemStyle HorizontalAlign="Right" Width="110" />
+                        </asp:BoundField>
+                         <asp:BoundField DataField="Accidental_100Plus_Premium" HeaderText="100Plus Premium" SortExpression="Accidental_100Plus_Premium" DataFormatString="{0:C2}" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle"></HeaderStyle>
+                            <ItemStyle HorizontalAlign="Right" Width="110" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="TPD_Premium" HeaderText="TPD Premium" SortExpression="TPD_Premium" DataFormatString="{0:C2}" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle"></HeaderStyle>
+                            <ItemStyle HorizontalAlign="Right" Width="110" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="DHC_Premium" HeaderText="DHC Premium" SortExpression="DHC_Premium" DataFormatString="{0:C2}" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle"></HeaderStyle>
+                            <ItemStyle HorizontalAlign="Right" Width="110" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="Total_Premium" HeaderText="Total Premium" DataFormatString="{0:C2}" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-Width="90">
+                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle"></HeaderStyle>
+
+                            <ItemStyle Width="100px" HorizontalAlign="Right"></ItemStyle>
+                        </asp:BoundField>
+                        <%-- <asp:BoundField DataField="company" HeaderText="Customer" SortExpression="company" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-Width="250" >
+<HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle"></HeaderStyle>
+
+<ItemStyle Width="250px"></ItemStyle>
+                </asp:BoundField>--%>
+
+                        <asp:TemplateField HeaderText="Detail">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="ViewDetailLink" runat="server" CommandArgument='<%# Eval("GTLI_Premium_ID")%>'
+                                    CommandName="DetailSale">View</asp:LinkButton>
+                                <asp:HiddenField ID="hdfTransactionType" Value='<%# Eval("Transaction_Type")%>' runat="server" />
+                            </ItemTemplate>
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="45px" />
+                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        </asp:TemplateField>
+
+                    </Columns>
+                </asp:GridView>
+                <asp:HiddenField ID="hdfCurrentSearchOption" runat="server" />
+                <br />
+                <br />
+
+            </div>
+        </div>
+    </div>
+
+     <%--Modal Search Created List Form --%>
+    <div id="myModalSearchCreatedList" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalSearchCreatedListHeader" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 class="panel-title">GTLI Created List Search</h3>
+        </div>
+        <div class="modal-body">
+            <%--Modal Body--%>
+           <table width="100%">
+                <tr>
+                    <td width="60px" >Company:</td>
+                    <td width="87%">
+                        <asp:TextBox ID="txtCompanyName" runat="server" Width="96%" Font-Size="10pt" TabIndex="1" ClientIDMode="Static" MaxLength="255"></asp:TextBox>
+                
+                    </td>                      
+                          
+                </tr>       
+            </table>
+        </div>
+
+        <div class="modal-footer">
+          
+            <asp:Button ID="btnSearch" class="btn btn-primary" runat="server" Style="height: 27px;" Text="Search"  ValidationGroup="3" OnClick="btnSearch_Click"    />
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        </div>
+    </div>
+    <%--End Modal GTLI Created List Search--%>
+</asp:Content>
+

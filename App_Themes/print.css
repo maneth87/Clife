@@ -1,0 +1,1353 @@
+﻿/*for kyocera printer*/
+
+@page {
+    size: A4;
+    margin: 0;
+    /*font-family: Arial;*/
+    width: 210mm;
+    height: 297mm;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+}
+
+html {
+    margin: 0;
+}
+
+body {
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+}
+
+.print_content {
+    /*font-family: Arial;*/
+    width: 200mm;
+    border: 1px solid black;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+}
+
+
+/*-----------------------------------------------------------------------*/
+.policy_number {
+    position: fixed;
+    margin-top: 48px; /*40px; 1:34*/ 
+    margin-left: 595px; /*600px; 595*/ 
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+    color:#00008f;
+    font-weight: bold;
+
+   
+}
+
+.customer_id {
+    position: fixed;
+    margin-top: 62px; /*58 1:56 62*/
+    margin-left:  595px; /*600px;*/ 
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+    color:#00008f;
+    font-weight: bold;
+
+}
+
+
+/*-----------------------------------------------------------------------*/
+.insured_name {
+    position: fixed;
+    margin-left: 260px; /*260 250*/
+    margin-top: 69px;/*69px;66*/ 
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    color:#00008f;
+    font-weight:bold;
+
+}
+
+.id_card {
+    position: fixed;
+    margin-left: 590px; /*590 580 587*/
+    margin-top: 69px; /*69px; 67 65*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+    color:#00008f;
+    font-weight: bold;
+
+}
+
+.dob {
+    position: fixed;
+    margin-top: 85px; /*85 82*/
+    margin-left: 260px; /*260 250*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+    color:#00008f;
+    font-weight: bold;
+
+}
+
+.age {
+    position: fixed;
+    margin-top: 101px; /*101px; 101*/
+    margin-left: 260px; /*260 250*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+color:#00008f;
+    font-weight: bold;
+}
+
+.gender {
+    position: fixed;
+    margin-top: 101px; /*101px; 101 93*/
+    margin-left: 450px; /*450 445 447*/
+    width: 50px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+/*color:red;*/
+    font-weight: bold;
+
+
+}
+
+.phone {
+    position: fixed;
+    margin-top: 117px; /*117px; 116*/
+    margin-left: 260px; /*260 250*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+    color:#00008f;
+    font-weight: bold;
+
+}
+
+.address {
+    position: fixed;
+    margin-top: 133px; /*133px; 132*/
+    margin-left: 260px; /*260 255*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    color:#00008f;
+    font-weight: bold;
+
+}
+/*-----------------------------------------------------------------------*/
+
+
+.insurance_plan {
+    position: fixed;
+    margin-top: 174px; /*170px 170 171*/
+    margin-left: 260px; /*260 255*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+    color:#00008f;
+    font-weight: bold;
+
+}
+
+.standard_premium {
+    position: fixed;
+    margin-top: 174px; /*170px; 170 171*/
+    margin-left: 577px; /*580 575 570*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    text-align: right;
+    width: 70px;
+
+    color:#00008f;
+    font-weight: bold;
+}
+
+.standard_premium_usd {
+    position: fixed;
+    margin-top: 174px; /*170px; 170 171*/
+    margin-left: 576px; /*576 571 566 573*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+    color:#00008f;
+    font-weight: bold;
+
+   
+}
+
+.sum_insured {
+    position: fixed;
+    margin-top: 191px; /*191px; 189 190*/
+    margin-left: 260px; /*260 255*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+    color:#00008f;
+    font-weight: bold;
+
+}
+
+.extra_premium {
+    position: fixed;
+    margin-top: 191px; /*191px;190*/
+    margin-left: 577px; /*580 570 575*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    text-align: right;
+    width: 70px;
+
+    color:#00008f;
+    font-weight: bold;
+
+}
+
+.extra_premium_usd {
+    position: fixed;
+    margin-top: 191px; /*191px; 190*/
+    margin-left: 576px; /*576 571 566 573*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+    color:#00008f;
+    font-weight: bold;
+
+}
+
+.coverage_period {
+    position: fixed;
+    margin-top: 207px; /*207px; 201*/
+    margin-left: 260px; /*260 250*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+    color:#00008f;
+    font-weight: bold;
+
+}
+
+.payment_period {
+    position: fixed;
+    margin-top: 222px; /*223px; 220*/
+    margin-left: 260px; /*260 255*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+    color:#00008f;
+    font-weight: bold;
+
+}
+
+.total_premium {
+    position: fixed;
+    margin-top: 222px; /*223px; 220 219*/
+    margin-left: 577px; /*580 575 570 577*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    text-align: right;
+    width: 70px;
+
+    color:#00008f;
+    font-weight: bold;
+
+}
+
+.total_premium_usd {
+    position: fixed;
+    margin-top: 222px; /*223px; 220 219*/
+    margin-left: 576px; /*576 571 566  573*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+    color:#00008f;
+    font-weight: bold;
+
+}
+
+
+.effective_date {
+    position: fixed;
+    margin-top: 238px; /*239px; 238 235*/
+    margin-left: 260px; /*260 255*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+    color:#00008f;
+    font-weight: bold;
+
+}
+
+
+.mode_of_payment {
+    position: fixed;
+    margin-top: 238px; /*239px; 233*/
+    margin-left: 576px; /*576 571 566 571  573*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+    color:#00008f;
+    font-weight: bold;
+
+}
+
+
+.expiry_date {
+    position: fixed;
+    margin-top: 254px; /*255px; 253*/
+    margin-left: 260px; /*260 255*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.due_date {
+    position: fixed;
+    margin-top: 254px; /*255px; 253*/
+    margin-left: 576px; /*571 573*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.maturity_date {
+    position: fixed;
+    margin-top: 270px; /*271px; 270*/
+    margin-left: 260px; /*260 255*/
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+/*-----------------------------------------------------------------------*/
+
+
+.payment_clause {
+    position: fixed;
+    margin-top: 311px;
+    margin-left: 65px;
+    height: 220px;
+    font-size: 5.9pt;
+    font-family: 'Khmer OS Content';
+    line-height: 13.5px;
+    /*font-weight: bold;*/
+
+color:#00008f;
+    font-weight: bold;
+
+    
+
+}
+
+.payment_clause_mrta {
+    position: fixed;
+    margin-top: 308px;
+    margin-left: 69px;
+    height: 220px;
+    font-size: 6.2pt;
+    font-family: 'Khmer OS Content';
+    /*font-weight: bold;*/
+    line-height: 16px;
+
+color:#00008f;
+    font-weight: bold;
+
+
+}
+
+
+.payment_clause_term {
+    position: fixed;
+    margin-top: 310px;
+    margin-left: 130px;
+    height: 220px;
+    font-size: 7pt;
+    font-family: 'Khmer OS Content';
+    /*font-weight: bold;*/
+    text-align: center;
+    line-height: 13.5px;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+/*-----------------------------------------------------------------------*/
+
+.benefit1 {
+    position: fixed;
+    margin-top: 532px;
+    margin-left: 80px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.relationship1 {
+    position: fixed;
+    margin-top: 532px;
+    margin-left: 274px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.percentage1 {
+    position: fixed;
+    margin-top:532px;
+    margin-left: 400px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.remark1 {
+    position: fixed;
+    margin-top:532px;
+    margin-left: 555px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+
+.benefit2 {
+    position: fixed;
+    margin-top: 548px;
+    margin-left: 80px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+}
+
+.relationship2 {
+    position: fixed;
+    margin-top: 548px;
+    margin-left: 274px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.percentage2 {
+    position: fixed;
+    margin-top: 548px;
+    margin-left: 400px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+}
+
+.remark2 {
+    position: fixed;
+    margin-top: 548px;
+    margin-left: 555px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+}
+
+
+.benefit3 {
+    position: fixed;
+    margin-top: 564px;
+    margin-left: 80px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.relationship3 {
+    position: fixed;
+    margin-top: 564px;
+    margin-left: 274px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.percentage3 {
+    position: fixed;
+    margin-top: 564px;
+    margin-left: 400px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+}
+
+.remark3 {
+    position: fixed;
+    margin-top: 564px;
+    margin-left: 555px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+
+.benefit4 {
+    position: fixed;
+    margin-top: 580px;
+    margin-left: 80px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+.relationship4 {
+    position: fixed;
+    margin-top: 580px;
+    margin-left: 274px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+}
+
+.percentage4 {
+    position: fixed;
+    margin-top: 580px;
+    margin-left: 400px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+}
+
+.remark4 {
+    position: fixed;
+    margin-top: 580px;
+    margin-left: 555px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+}
+
+
+.benefit5 {
+    position: fixed;
+    margin-top: 596px;
+    margin-left: 80px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+}
+
+.relationship5 {
+    position: fixed;
+    margin-top: 596px;
+    margin-left: 274px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+}
+
+.percentage5 {
+    position: fixed;
+    margin-top: 596px;
+    margin-left: 400px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.remark5 {
+    position: fixed;
+    margin-top: 596px;
+    margin-left: 555px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+
+
+/*-----------------------------------------------------------------------*/
+
+.surrender_value_table {
+
+    position: fixed;
+    margin-top: 625px;
+    margin-left: 298px;
+    font-weight: bold;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+/*-------------------------------------Surrender Value-------------------------------------*/
+
+.policy_year_1, .policy_year_2, .policy_year_3, .policy_year_4, .policy_year_5, .policy_year_6, .policy_year_7, .policy_year_8, .policy_year_9, .policy_year_10,
+.policy_year_11, .policy_year_12, .policy_year_13, .policy_year_14, .policy_year_15, .policy_year_16, .policy_year_17, .policy_year_18, .policy_year_19, .policy_year_20,
+.policy_year_21, .policy_year_22, .policy_year_23, .policy_year_24 {
+    font-size: 7pt;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+
+.surrender_value_1, .surrender_value_2, .surrender_value_3, .surrender_value_4, .surrender_value_5, .surrender_value_6, .surrender_value_7, .surrender_value_8, .surrender_value_9, .surrender_value_10,
+.surrender_value_11, .surrender_value_12, .surrender_value_13, .surrender_value_14, .surrender_value_15, .surrender_value_16, .surrender_value_17, .surrender_value_18, .surrender_value_19, .surrender_value_20,
+.surrender_value_21, .surrender_value_22, .surrender_value_23, .surrender_value_24 {
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+/*----------------------------------------------------------*/
+.policy_year_1 {
+    position: fixed;
+    margin-top: 675px;
+    margin-left: 88px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_1 {
+    position: fixed;
+    margin-top: 675px;
+    margin-left: 148px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.policy_year_7 {
+    position: fixed;
+    margin-top: 675px;
+    margin-left: 248px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_7 {
+    position: fixed;
+    margin-top: 675px;
+    margin-left: 310px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.policy_year_13 {
+    position: fixed;
+    margin-top: 675px;
+    margin-left: 410px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_13 {
+    position: fixed;
+    margin-top: 675px;
+    margin-left: 472px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.policy_year_19 {
+    position: fixed;
+    margin-top: 675px;
+    margin-left: 572px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_19 {
+    position: fixed;
+    margin-top: 675px;
+    margin-left: 633px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+/*-------------------------------------*/
+
+.policy_year_2 {
+    position: fixed;
+    margin-top: 687px;
+    margin-left: 88px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_2 {
+    position: fixed;
+    margin-top: 687px;
+    margin-left: 148px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+.policy_year_8 {
+    position: fixed;
+    margin-top: 687px;
+    margin-left: 248px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_8 {
+    position: fixed;
+    margin-top: 687px;
+    margin-left: 310px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+.policy_year_14 {
+    position: fixed;
+    margin-top: 687px;
+    margin-left: 410px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_14 {
+    position: fixed;
+    margin-top: 687px;
+    margin-left: 472px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+.policy_year_20 {
+    position: fixed;
+    margin-top: 687px;
+    margin-left: 572px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_20 {
+    position: fixed;
+    margin-top: 687px;
+    margin-left: 633px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+/*-------------------------------------*/
+
+.policy_year_3 {
+    position: fixed;
+    margin-top: 699px;
+    margin-left: 88px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_3 {
+    position: fixed;
+    margin-top: 699px;
+    margin-left: 148px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+.policy_year_9 {
+    position: fixed;
+    margin-top: 699px;
+    margin-left: 248px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_9 {
+    position: fixed;
+    margin-top: 699px;
+    margin-left: 310px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+.policy_year_15 {
+    position: fixed;
+    margin-top: 699px;
+    margin-left: 410px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_15 {
+    position: fixed;
+    margin-top: 699px;
+    margin-left: 472px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.policy_year_21 {
+    position: fixed;
+    margin-top: 699px;
+    margin-left: 572px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_21 {
+    position: fixed;
+    margin-top: 699px;
+    margin-left: 633px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+
+/*-------------------------------------*/
+
+.policy_year_4 {
+    position: fixed;
+    margin-top: 711px;
+    margin-left: 88px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_4 {
+    position: fixed;
+    margin-top: 711px;
+    margin-left: 148px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+.policy_year_10 {
+    position: fixed;
+    margin-top: 711px;
+    margin-left: 248px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_10 {
+    position: fixed;
+    margin-top: 711px;
+    margin-left: 310px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+.policy_year_16 {
+    position: fixed;
+    margin-top: 711px;
+    margin-left: 410px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_16 {
+    position: fixed;
+    margin-top: 711px;
+    margin-left: 472px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+.policy_year_22 {
+    position: fixed;
+    margin-top: 711px;
+    margin-left: 572px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_22 {
+    position: fixed;
+    margin-top: 711px;
+    margin-left: 633px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+/*----------------------------------------*/
+
+
+.policy_year_5 {
+    position: fixed;
+    margin-top: 723px;
+    margin-left: 88px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_5 {
+    position: fixed;
+    margin-top: 723px;
+    margin-left: 148px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+.policy_year_11 {
+    position: fixed;
+    margin-top: 723px;
+    margin-left: 248px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_11 {
+    position: fixed;
+    margin-top: 723px;
+    margin-left: 310px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+.policy_year_17 {
+    position: fixed;
+    margin-top: 723px;
+    margin-left: 410px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_17 {
+    position: fixed;
+    margin-top: 723px;
+    margin-left: 472px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+.policy_year_23 {
+    position: fixed;
+    margin-top: 723px;
+    margin-left: 572px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_23 {
+    position: fixed;
+    margin-top: 723px;
+    margin-left: 633px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+/*-------------------------------------*/
+
+.policy_year_6 {
+    position: fixed;
+    margin-top: 735px;
+    margin-left: 88px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_6 {
+    position: fixed;
+    margin-top: 735px;
+    margin-left: 148px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+.policy_year_12 {
+    position: fixed;
+    margin-top: 735px;
+    margin-left: 248px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_12 {
+    position: fixed;
+    margin-top: 735px;
+    margin-left: 310px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+.policy_year_18 {
+    position: fixed;
+    margin-top: 735px;
+    margin-left: 410px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_18 {
+    position: fixed;
+    margin-top: 735px;
+    margin-left: 472px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+.policy_year_24 {
+    position: fixed;
+    margin-top: 735px;
+    margin-left: 572px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 10px;
+    text-align: center;
+
+color:#00008f;
+    font-weight: bold;
+
+}
+
+.surrender_value_24 {
+    position: fixed;
+    margin-top: 735px;
+    margin-left: 633px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+    width: 30px;
+    text-align: right;
+
+color:#00008f;
+    font-weight: bold;
+}
+
+/*-----------------------------------------------------------------------*/
+
+
+.issue_date {
+    position: fixed;
+    margin-top: 817px; /*819 812 811 813*/
+    margin-left: 582px;
+    font-family: 'Khmer OS Content';
+    font-size: 7pt;
+
+color:#00008f;
+    font-weight: bold;
+}

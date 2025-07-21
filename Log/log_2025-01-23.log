@@ -1,0 +1,70 @@
+13:47:51   [maneth.som]   Error function [btnExport_Click(object sender, EventArgs e)] in class [group_micro_policy_detail_req.aspx.cs], detail:Thread was being aborted.=>   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at Pages_Reports_group_micro_policy_detail_req.btnExport_Click(Object sender, EventArgs e) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\Pages\Reports\group_micro_policy_detail_req.aspx.cs:line 250
+
+14:16:17   [maneth.som]   Error function [btnSearch_Click(object sender, EventArgs e)] in class [group_micro_policy_detail_req.aspx.cs], detail:String was not recognized as a valid DateTime.=>   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at Helper.FormatDateTime(String strDate) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\App_Code\Helper\Helper.cs:line 542
+   at Pages_Reports_group_micro_policy_detail_req.btnSearch_Click(Object sender, EventArgs e) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\Pages\Reports\group_micro_policy_detail_req.aspx.cs:line 91
+
+15:20:57   [maneth.som]   Error function[GetCertificateByte(string policyId, string policyType)] in class [Certificate], detail:Cannot find table 0.=>   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at Certificate.GetCertificateBytes(String policyId, String policyType) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\App_Code\Services\Certificate.cs:line 878
+
+15:21:08   [maneth.som]   Error function [btnSearch_Click(object sender, EventArgs e)] in class [group_micro_policy_detail_req.aspx.cs], detail:Object reference not set to an instance of an object.=>   at Pages_Reports_group_micro_policy_detail_req.SaveActivity(TYPE activity, String description) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\Pages\Reports\group_micro_policy_detail_req.aspx.cs:line 21
+   at Pages_Reports_group_micro_policy_detail_req.btnSearch_Click(Object sender, EventArgs e) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\Pages\Reports\group_micro_policy_detail_req.aspx.cs:line 94
+
+15:21:30   [maneth.som]   Error function[GetCertificateByte(string policyId, string policyType)] in class [Certificate], detail:Cannot find table 0.=>   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at Certificate.GetCertificateBytes(String policyId, String policyType) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\App_Code\Services\Certificate.cs:line 878
+
+15:22:15   [maneth.som]   Error function[GetCertificateByte(string policyId, string policyType)] in class [Certificate], detail:Cannot find table 0.=>   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at Certificate.GetCertificateBytes(String policyId, String policyType) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\App_Code\Services\Certificate.cs:line 878
+
+15:41:24   [maneth.som]   Error function [btnExport_Click(object sender, EventArgs e)] in class [group_micro_policy_detail_req.aspx.cs], detail:Object reference not set to an instance of an object.=>   at Pages_Reports_group_micro_policy_detail_req.SaveActivity(TYPE activity, String description) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\Pages\Reports\group_micro_policy_detail_req.aspx.cs:line 21
+   at Pages_Reports_group_micro_policy_detail_req.btnExport_Click(Object sender, EventArgs e) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\Pages\Reports\group_micro_policy_detail_req.aspx.cs:line 239
+
+16:01:36   [maneth.som]   Error function [btnSearch_Click(object sender, EventArgs e)] in class [group_micro_policy_detail_req.aspx.cs], detail:Object reference not set to an instance of an object.=>   at Pages_Reports_group_micro_policy_detail_req.SaveActivity(TYPE activity, String description) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\Pages\Reports\group_micro_policy_detail_req.aspx.cs:line 21
+   at Pages_Reports_group_micro_policy_detail_req.btnSearch_Click(Object sender, EventArgs e) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\Pages\Reports\group_micro_policy_detail_req.aspx.cs:line 94
+
+16:26:22   [maneth.som]   Error function [btnExport_Click(object sender, EventArgs e)] in class [group_micro_policy_detail_req.aspx.cs], detail:Thread was being aborted.=>   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at Pages_Reports_group_micro_policy_detail_req.btnExport_Click(Object sender, EventArgs e) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\Pages\Reports\group_micro_policy_detail_req.aspx.cs:line 252
+
+16:43:24   [maneth.som]   Error function[GetCertificateByte(string policyId, string policyType)] in class [Certificate], detail:Could not find a part of the path 'C:\Upload\TC\SO_DHC_POLICY_INSURANCE_V2.pdf'.=>   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalReadAllBytes(String path, Boolean checkHost)
+   at System.IO.File.ReadAllBytes(String path)
+   at Certificate.GetCertificateBytes(String policyId, String policyType) in d:\SYSTEM\CLIFE-Micro - IA\75-Wing Digital Loan\Clife-WDL\App_Code\Services\Certificate.cs:line 1084
+
+17:42:49   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Cannot access a closed Stream.
+
+17:43:11   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Cannot access a closed Stream.
+
+17:45:11   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Cannot access a closed Stream.
+
+17:50:02   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Cannot access a closed Stream.
+
+17:51:11   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Cannot access a closed Stream.
+
+17:59:06   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Cannot access a closed Stream.
+
+18:02:33   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Cannot access a closed Stream.
+
+18:03:51   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Cannot access a closed Stream.
+
+18:06:23   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Cannot access a closed Stream.
+
+18:07:23   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Cannot access a closed Stream.
+
+18:10:48   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Cannot access a closed Stream.
+
+18:11:31   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Thread was being aborted.
+
+18:13:19   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Thread was being aborted.
+
+18:14:25   [maneth.som]   Error function[Page_Load(object sender, EventArgs e)] in page [banca_micro_cert.aspx.cs], detail:Thread was being aborted.
+
