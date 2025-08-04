@@ -36,7 +36,7 @@ public class da_agent_mapping
 
             result = db.Execute(AppConfiguration.GetConnectionString(), "SP_CT_SALE_AGENT_CHANNEL_LOCATION_INSERT", new string[,] {
             {"@ID", obj.Id}, {"@USER_NAME", obj.UserName}, {"@SALE_AGENT_ID",obj.SaleAgentId}, {"@CHANNEL_LOCATION_ID", obj.ChannelLocationId}, {"@STATUS", obj.Status+""},
-            {"@REMARKS",obj.Remarks},{"@CREATED_BY", obj.CreatedBy}, {"@CREATED_ON", obj.CreatedOn+""}
+            {"@REMARKS",obj.Remarks},{"@CREATED_BY", obj.CreatedBy}, {"@CREATED_ON", obj.CreatedOn+""},{"@product_id", obj.ProductId}
             }, "da_agent_mapping=>Save(bl_agent_mapping obj))");
             Transaction = result;
             Message = Transaction == true ? "Saved record successfully." : "Saved record fail.";
@@ -64,7 +64,7 @@ public class da_agent_mapping
 
             result = db.Execute(AppConfiguration.GetConnectionString(), "SP_CT_SALE_AGENT_CHANNEL_LOCATION_UPDATE", new string[,] {
             {"@ID", obj.Id}, {"@USER_NAME", obj.UserName}, {"@SALE_AGENT_ID",obj.SaleAgentId}, {"@CHANNEL_LOCATION_ID", obj.ChannelLocationId}, {"@STATUS", obj.Status+""},
-            {"@REMARKS",obj.Remarks},{"@UPDATED_BY", obj.UpdatedBy}, {"@UPDATED_ON", obj.UpdatedOn+""}
+            {"@REMARKS",obj.Remarks},{"@UPDATED_BY", obj.UpdatedBy}, {"@UPDATED_ON", obj.UpdatedOn+""},{"@product_id", obj.ProductId}
             }, "da_agent_mapping=>Update(bl_agent_mapping obj))");
             Transaction = result;
             Message = Transaction == true ? "Updated record successfully." : "Updated record fail.";
@@ -146,7 +146,8 @@ public class da_agent_mapping
                         ChannelItemName =r["channel_name"].ToString(),
                          SaleAgentName =r["sale_agent_id"].ToString(),
                           OfficeCode =r["office_code"].ToString(),
-                           OfficeName=r["office_name"].ToString()
+                           OfficeName=r["office_name"].ToString(),
+                           ProductId=r["product_id"].ToString()
                     });
                 }
                 Transaction = true;

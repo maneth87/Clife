@@ -1,13 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Content.master" AutoEventWireup="true" CodeFile="05frmChannelLocationAgentMapping.aspx.cs" Inherits="Pages_Channel_05frmChannelLocationAgentMapping" %>
 
-
 <asp:Content ID="Content1" ContentPlaceHolderID="Toolbar" runat="Server">
 
     <style>
         .tip {
-            color:red;
-            font-style:italic;
-            font-weight:normal;
+            color: red;
+            font-style: italic;
+            font-weight: normal;
+        }
+
+       .CheckboxList input {
+            float: left;
+            clear: both;
         }
     </style>
     <link href="../../App_Themes/progress_dialog.css" rel="stylesheet" />
@@ -49,14 +53,14 @@
                         </div>
                         <div class="panel-body">
                             <table>
-                            
+
                                 <tr>
 
                                     <td>User Name: 
                                     </td>
                                     <td>
-                                    <asp:TextBox ID="txtSearchInfo" runat="server" placeholder="User Name"></asp:TextBox>
-                                       
+                                        <asp:TextBox ID="txtSearchInfo" runat="server" placeholder="User Name"></asp:TextBox>
+
                                     </td>
 
 
@@ -78,8 +82,8 @@
                             <h3 class="panel-title">AGENT MAPPING LIST</h3>
                         </div>
 
-                        <div class="panel-body" id="divList" runat="server" style="overflow-x:scroll;">
-                            <asp:GridView ID="gvParam" CssClass="grid-layout" runat="server" AutoGenerateColumns="False" Width="100%" HorizontalAlign="Center" OnRowEditing="gvParam_RowEditing" PageSize="10" AllowPaging="true" OnPageIndexChanging="gvParam_PageIndexChanging" AlternatingRowStyle-BackColor = "#C2D69B">
+                        <div class="panel-body" id="divList" runat="server" style="overflow-x: scroll;">
+                            <asp:GridView ID="gvParam" CssClass="grid-layout" runat="server" AutoGenerateColumns="False" Width="100%" HorizontalAlign="Center" OnRowEditing="gvParam_RowEditing" PageSize="10" AllowPaging="true" OnPageIndexChanging="gvParam_PageIndexChanging" AlternatingRowStyle-BackColor="#C2D69B">
                                 <Columns>
 
                                     <asp:TemplateField HeaderText="No" Visible="true">
@@ -94,7 +98,7 @@
                                         </ItemTemplate>
                                         <ItemStyle HorizontalAlign="Center" />
                                     </asp:TemplateField>
-                                     <asp:TemplateField HeaderText="CAHNNEL NAME">
+                                    <asp:TemplateField HeaderText="CAHNNEL NAME">
                                         <ItemTemplate>
                                             <asp:Label ID="lblChannelItemName" Width="120px" runat="server" Text='<%# Eval("ChannelItemName")  %>'></asp:Label>
                                         </ItemTemplate>
@@ -112,14 +116,14 @@
                                         </ItemTemplate>
                                         <ItemStyle HorizontalAlign="Center" />
                                     </asp:TemplateField>
-                                     
+
                                     <asp:TemplateField HeaderText="BRANCH CODE" Visible="true">
                                         <ItemTemplate>
                                             <asp:Label ID="lblOfficeCode" Width="80px" runat="server" Text='<%#Eval("OfficeCode") %>'></asp:Label>
                                         </ItemTemplate>
                                         <ItemStyle HorizontalAlign="Center" />
                                     </asp:TemplateField>
-                                    
+
                                     <asp:TemplateField HeaderText="BRANCH NAME" Visible="true">
                                         <ItemTemplate>
                                             <asp:Label ID="lblOfficeName" Width="300px" runat="server" Text='<%#Eval("OfficeName") %>'></asp:Label>
@@ -136,7 +140,7 @@
 
                                     <asp:TemplateField HeaderText="AGENT CODE">
                                         <ItemTemplate>
-                                            <asp:Label ID="lblAgentCode" Width="50px" runat="server" Text='<%# Eval("SaleAgentId").ToString()  %>'></asp:Label>
+                                            <asp:Label ID="lblAgentCode" Width="50px" runat="server" Text='<%# Eval("SaleAgentId")  %>'></asp:Label>
                                         </ItemTemplate>
                                         <ItemStyle HorizontalAlign="Center" />
                                     </asp:TemplateField>
@@ -146,7 +150,12 @@
                                         </ItemTemplate>
                                         <ItemStyle HorizontalAlign="Center" />
                                     </asp:TemplateField>
-                                   
+                                    <asp:TemplateField HeaderText="PRODUCT ID" HeaderStyle-Width="80px">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblProductId" Width="200px" runat="server" Text='<%# Eval("ProductId")  %>'></asp:Label>
+                                        </ItemTemplate>
+                                        <ItemStyle HorizontalAlign="Center" />
+                                    </asp:TemplateField>
                                     <asp:TemplateField HeaderText="STATUS">
                                         <ItemTemplate>
                                             <asp:Label ID="lblStatus" Width="80px" runat="server" Text='<%# Eval("Status").ToString()=="1"? "ACTIVE":"INACTIVE"  %>'></asp:Label>
@@ -184,26 +193,34 @@
 
                             <table id="tblAddContent">
                                 <tr>
-                                    <td> Channel Name:<span style="color: red; font-weight: bold;">*</span></td>
+                                    <td>Channel Name:<span style="color: red; font-weight: bold;">*</span></td>
                                     <td colspan="5">
-                                        <asp:DropDownList ID="ddlChannelName" Width="100%" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlChannelName_SelectedIndexChanged" >
-
+                                        <asp:DropDownList ID="ddlChannelName" Width="100%" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlChannelName_SelectedIndexChanged">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
-                                 <tr>
-                                    <td> Branch:<span style="color: red; font-weight: bold;">*</span></td>
-                                    <td colspan="5">
-                                        <asp:DropDownList ID="ddlBranch" Width="100%" runat="server" >
+                                <tr>
+                                    <td style="vertical-align:top;">Branch:<span style="color: red; font-weight: bold;">*</span></td>
+                                    <td colspan="5" style="border:1px solid gray; border-radius:10px;">
+                                      <%--  <asp:DropDownList ID="ddlBranch" Width="100%" runat="server">
+                                        </asp:DropDownList>--%>
+                                         <asp:CheckBoxList ID="cblBranch" runat="server" RepeatDirection="Horizontal" RepeatColumns="4" CssClass="CheckboxList" Width="100%" CellSpacing="4" AutoPostBack="true" OnSelectedIndexChanged="cblBranch_SelectedIndexChanged"></asp:CheckBoxList>
 
-                                        </asp:DropDownList>
+                                    </td>
+                                </tr>
+                                  <tr>
+                                    <td style="vertical-align:top;">Product:<span style="color: red; font-weight: bold;">*</span></td>
+                                    <td colspan="5" style="border:1px solid gray; border-radius:10px;">
+                                     
+                                         <asp:CheckBoxList ID="cblProduct" runat="server" RepeatDirection="Horizontal" RepeatColumns="2" CssClass="CheckboxList" Width="100%" CellSpacing="4" AutoPostBack="true" ></asp:CheckBoxList>
+
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>User Name: <span style="color: red; font-weight: bold;">*</span>
                                     </td>
                                     <td>
-                                         <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
                                     </td>
                                     <td>Agent Code:<span style="color: red; font-weight: bold;">*</span>
                                     </td>
@@ -211,7 +228,7 @@
                                         <asp:TextBox ID="txtAgentCode" runat="server"></asp:TextBox>
                                     </td>
                                     <td>Status<span style="color: red; font-weight: bold;">*</span></td>
-                                      <td>
+                                    <td>
                                         <asp:DropDownList ID="ddlStatus" runat="server">
                                             <asp:ListItem Text="--- Select ---" Value=""></asp:ListItem>
                                             <asp:ListItem Text="ACTIVE" Value="1"></asp:ListItem>
@@ -220,9 +237,9 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td> Remarks:<span style="color: red; font-weight: bold;">*</span></td>
+                                    <td>Remarks:</td>
                                     <td colspan="5">
-                                        <asp:TextBox ID="txtRemarks" Width="97%" runat="server" >
+                                        <asp:TextBox ID="txtRemarks" Width="97%" runat="server">
 
                                         </asp:TextBox>
                                     </td>
@@ -234,7 +251,7 @@
                                         <asp:Button ID="btnCancel" runat="server" CssClass="btn btn-primary" OnClick="btnCancel_Click" Text="CANCEL" />
                                     </td>
                                 </tr>
-                              
+                               
                             </table>
 
                         </div>

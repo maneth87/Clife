@@ -132,7 +132,8 @@ public partial class Pages_Channel_05frmChannelLocationAgentMapping : System.Web
     void EnableControl(bool t = true)
     {
         ddlChannelName.Enabled = t;
-        ddlBranch.Enabled = t;
+        cblBranch.Enabled = t;
+        cblProduct.Enabled = t;
         txtUserName.Enabled = t;
         txtAgentCode.Enabled = t;
         ddlStatus.Enabled = t;
@@ -149,9 +150,14 @@ public partial class Pages_Channel_05frmChannelLocationAgentMapping : System.Web
             ErrorMessage = "Channel Name is required.";
             return false;
         }
-        else if (ddlBranch.SelectedValue == "")
+        else if (cblBranch.Items.Count==0)
         {
             ErrorMessage = "Branch is required.";
+            return false;
+        }
+        else if (cblProduct.Items.Count == 0)
+        {
+            ErrorMessage = "Product code is required.";
             return false;
         }
         else if (txtUserName.Text.Trim() == "")
@@ -180,11 +186,12 @@ public partial class Pages_Channel_05frmChannelLocationAgentMapping : System.Web
     {
         AgentMappingId = string.Empty;
         ddlChannelName.SelectedIndex = 0;
-        ddlBranch.Items.Clear();
+        cblBranch.Items.Clear();
         txtUserName.Text = "";
         txtAgentCode.Text = "";
         ddlStatus.SelectedIndex = 0;
         txtRemarks.Text = "";
+        cblProduct.Items.Clear();
     }
     void BindChannel()
     {
@@ -192,7 +199,11 @@ public partial class Pages_Channel_05frmChannelLocationAgentMapping : System.Web
     }
     void BindChannelLocation()
     {
-        Helper.BindChanneLocation(ddlBranch, ddlChannelName.SelectedValue);
+        Helper.BindChanneLocation(cblBranch, ddlChannelName.SelectedValue);
+    }
+    private void BindProduct()
+    {
+        Options.Bind(cblProduct, da_micro_product_config.ProductConfig.GetMicroProductConfigListByChannelItemId(ddlChannelName.SelectedValue), bl_micro_product_config.NAME.ProductRemarks, bl_micro_product_config.NAME.Product_ID, -1);
     }
     void LoadData(string filter = "")
     {
@@ -253,11 +264,80 @@ public partial class Pages_Channel_05frmChannelLocationAgentMapping : System.Web
     }
     protected void btnSave_Click(object sender, EventArgs e)
     {
+        if (this.ValidateForm())
+        {
+            bl_agent_mapping blAgentMapping = new bl_agent_mapping()
+            {
+                ChannelLocationId = "",
+                UserName = this.txtUserName.Text.Trim(),
+                SaleAgentId = this.txtAgentCode.Text.Trim(),
+                Status = Convert.ToInt32(this.ddlStatus.SelectedValue),
+                CreatedBy = this.UserName,
+                CreatedOn = DateTime.Now,
+                Remarks = this.txtRemarks.Text.Trim(),
+                UpdatedBy = this.UserName,
+                UpdatedOn = DateTime.Now
+            };
+            string str = "";
+            for (int index = 0; index < this.cblProduct.Items.Count; ++index)
+            {
+                if (this.cblProduct.Items[index].Selected)
+                    str += str != "" ? "," + this.cblProduct.Items[index].Value : this.cblProduct.Items[index].Value;
+            }
+            int num = 0;
+            if (string.IsNullOrWhiteSpace(this.AgentMappingId))
+            {
+                for (int index = 0; index <= this.cblBranch.Items.Count - 1; ++index)
+                {
+                    if (this.cblBranch.Items[index].Selected)
+                    {
+                        blAgentMapping.ChannelLocationId = this.cblBranch.Items[index].Value;
+                        blAgentMapping.Id = da_agent_mapping.GetId();
+                        blAgentMapping.ProductId = str;
+                        num = da_agent_mapping.Save(blAgentMapping) ? 1 : 0;
+                    }
+                }
+                if (num > 0)
+                {
+                    Helper.Alert(false, da_agent_mapping.Message, this.lblError);
+                    this.AgentMappingId = blAgentMapping.Id;
+                    this.Transaction(Helper.FormTransactionType.SAVE);
+                }
+                else
+                    Helper.Alert(true, da_agent_mapping.Message, this.lblError);
+            }
+            else
+            {
+                blAgentMapping.Id = this.AgentMappingId;
+                blAgentMapping.ProductId = str;
+                for (int index = 0; index <= this.cblBranch.Items.Count - 1; ++index)
+                {
+                    if (this.cblBranch.Items[index].Selected)
+                    {
+                        blAgentMapping.ChannelLocationId = this.cblBranch.Items[index].Value;
+                        break;
+                    }
+                }
+                if (da_agent_mapping.Update(blAgentMapping))
+                {
+                    Helper.Alert(false, da_agent_mapping.Message, this.lblError);
+                    this.Transaction(Helper.FormTransactionType.SAVE);
+                }
+                else
+                    Helper.Alert(true, da_agent_mapping.Message, this.lblError);
+            }
+        }
+        else
+            Helper.Alert(true, this.ErrorMessage, this.lblError);
+    }
+
+    protected void btnSave_Click1(object sender, EventArgs e)
+    {
         if (ValidateForm())
         {
             bl_agent_mapping obj = new bl_agent_mapping()
             {
-                ChannelLocationId = ddlBranch.SelectedValue,
+               // ChannelLocationId = ddlBranch.SelectedValue,
                 UserName = txtUserName.Text.Trim(),
                 SaleAgentId = txtAgentCode.Text.Trim(),
                 Status = Convert.ToInt32(ddlStatus.SelectedValue),
@@ -341,15 +421,29 @@ public partial class Pages_Channel_05frmChannelLocationAgentMapping : System.Web
             Label lStatus = (Label)r.FindControl("lblStatus");
             Label lRemarks = (Label)r.FindControl("lblRemarks");
             Label lUserName = (Label)r.FindControl("lblUserName");
+            Label lProudctId = (Label)r.FindControl("lblProductId");
             Helper.SelectedDropDownListIndex("VALUE", ddlChannelName, lChannelItemId.Text);
             ddlChannelName_SelectedIndexChanged(null, null);
             AgentMappingId = lId.Text;
-            Helper.SelectedDropDownListIndex("VALUE", ddlBranch, lChannelLocationId.Text);
+           Helper.SelectedCheckBoxListIndex("VALUE", cblBranch, lChannelLocationId.Text,false);
             txtUserName.Text = lUserName.Text;
             txtAgentCode.Text = lAgentCode.Text;
             Helper.SelectedDropDownListIndex("TEXT", ddlStatus, lStatus.Text);
             txtRemarks.Text = lRemarks.Text;
-          
+
+            List<string> list = lProudctId.Text.Split(',').ToList<string>();
+            for (int index = 0; index < this.cblProduct.Items.Count; ++index)
+            {
+                string str1 = this.cblProduct.Items[index].Value;
+                foreach (string str2 in list)
+                {
+                    if (str2.ToLower() == str1.ToLower())
+                    {
+                        this.cblProduct.Items[index].Selected = true;
+                        break;
+                    }
+                }
+            }
 
         }
         catch (Exception ex)
@@ -368,7 +462,35 @@ public partial class Pages_Channel_05frmChannelLocationAgentMapping : System.Web
     }
     protected void ddlChannelName_SelectedIndexChanged(object sender, EventArgs e)
     {
-        ddlBranch.Items.Clear();
+       cblBranch.Items.Clear();
         BindChannelLocation();
+        BindProduct();
+    }
+
+    protected void cblBranch_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        int num = this.cblBranch.Items.Cast<ListItem>().Count<ListItem>((Func<ListItem, bool>)(li => li.Selected));
+        int count = this.cblBranch.Items.Count;
+        string[] strArray = this.Request.Form["__EVENTTARGET"].Split('$');
+        if (int.Parse(strArray[strArray.Length - 1]) == 0)
+        {
+            if (this.cblBranch.Items[0].Selected)
+            {
+                for (int index = 0; index <= this.cblBranch.Items.Count - 1; ++index)
+                    this.cblBranch.Items[index].Selected = true;
+            }
+            else
+                this.cblBranch.ClearSelection();
+        }
+        else if (num < count && this.cblBranch.Items[0].Selected)
+        {
+            this.cblBranch.Items[0].Selected = false;
+        }
+        else
+        {
+            if (num != count - 1)
+                return;
+            this.cblBranch.Items[0].Selected = true;
+        }
     }
 }

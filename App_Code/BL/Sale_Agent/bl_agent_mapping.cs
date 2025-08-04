@@ -115,4 +115,5 @@ public class bl_agent_mapping
     /// Read property
     /// </summary>
     public string OfficeName { get; set; }
+    public string ProductId { get; set; }
 }
