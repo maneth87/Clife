@@ -13,7 +13,7 @@ using System.Web.Services;
 [System.Web.Script.Services.ScriptService]
 public partial class Pages_Business_MiroIndviduleApp_individule_micro_application_form : System.Web.UI.Page
 {
-   
+
     string userName = "";
 
     private bl_micro_product_config ProductConfig
@@ -207,7 +207,7 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
             if (flag)
             {
                 //bl_micro_application.bl_application_for_issue applicationForIssue = new bl_micro_application.bl_application_for_issue();
-               // object obj1 = new object();
+                // object obj1 = new object();
                 int loopStep = 0;
                 DateTime newEffectiveDate = new DateTime(1900, 1, 1);
                 DateTime effectiveDate = Helper.FormatDateTime(this.txtEffectiveDate.Text.Trim());
@@ -221,17 +221,17 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
                 bl_micro_product_config proConfig = new bl_micro_product_config();
                 bool flagSubmit = false;
                 bool isExistCust = false;
-                bool isBreakAll = false;    
+                bool isBreakAll = false;
                 string cusNoFormat = "";
                 string cusType = "";
                 string polNoFormat = "";
 
                 int cusAge = 0;
-                 
+
                 foreach (bl_micro_application.ApplicationFilter applicationFilter in da_micro_application.GetApplicationNumberMainSub(this.hdfApplicationNumber.Value))
                 {
                     bl_micro_application.bl_application_for_issue applicationForIssuePolicy = da_micro_application.GetApplicationForIssuePolicy(applicationFilter.ApplicationNumber);
-                   // object obj2 = new object();
+                    // object obj2 = new object();
                     if (applicationForIssuePolicy != null)
                     {
                         if (loopStep == 0)/*flag to save customer only one time since it's same customer*/
@@ -240,7 +240,7 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
                             bl_micro_customer1 existCusObj = da_micro_customer.GetCustomerByIdNumber(Convert.ToInt32(applicationForIssuePolicy.Customer.ID_TYPE), applicationForIssuePolicy.Customer.ID_NUMBER);
                             if (existCusObj.CUSTOMER_NUMBER != null) /*skip saving existing customer*/
                             {
-                                
+
                                 CUSTOMER = existCusObj;
                                 isExistCust = true;
                                 flagSubmit = true;
@@ -316,15 +316,15 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
                             if (flagSubmit)
                             {
                                 #region Policy
-                               
+
                                 POLICY.SEQ = !(POLICY.LAST_PREFIX == lastPolicyPrefix.PREFIX2) || !(POLICY.LAST_PREFIX1.ToUpper() == lastPolicyPrefix.PREFIX1) ? 1 : POLICY.LAST_SEQ + 1;
 
-                                polNoFormat= lastPolicyPrefix.PREFIX1 + lastPolicyPrefix.PREFIX2 + POLICY.SEQ.ToString(lastPolicyPrefix.DIGITS);
+                                polNoFormat = lastPolicyPrefix.PREFIX1 + lastPolicyPrefix.PREFIX2 + POLICY.SEQ.ToString(lastPolicyPrefix.DIGITS);
                                 POLICY.POLICY_NUMBER = polNoFormat;
                                 POLICY.POLICY_TYPE = proConfig.BusinessType.ToUpper() == bl_micro_product_config.BusinussTypeOption.BANCA_COOPERATE.ToString() ? "COR" : "IND";
                                 POLICY.APPLICATION_ID = applicationForIssuePolicy.Application.APPLICATION_ID;
                                 POLICY.CUSTOMER_ID = CUSTOMER.ID;
-                               // POLICY.PRODUCT_ID = applicationForIssuePolicy.Insurance.PRODUCT_ID;
+                                // POLICY.PRODUCT_ID = applicationForIssuePolicy.Insurance.PRODUCT_ID;
                                 POLICY.CHANNEL_ID = applicationForIssuePolicy.Application.CHANNEL_ID;
                                 POLICY.CHANNEL_ITEM_ID = applicationForIssuePolicy.Application.CHANNEL_ITEM_ID;
                                 POLICY.CHANNEL_LOCATION_ID = applicationForIssuePolicy.Application.CHANNEL_LOCATION_ID;
@@ -367,10 +367,10 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
                                         newEffectiveDate = applicationFilter.ApplicationType == Helper.ApplicationType.R ? newEffectiveDate.AddYears(1) : effectiveDate;
                                     }
 
-                                   // newEffectiveDate = newEffectiveDate.Year != 1900 ? (applicationFilter.ApplicationType == Helper.ApplicationType.R ? newEffectiveDate.AddYears(1) : effectiveDate) : (applicationFilter.ApplicationType == Helper.ApplicationType.R ? effectiveDate.AddYears(1) : effectiveDate);
+                                    // newEffectiveDate = newEffectiveDate.Year != 1900 ? (applicationFilter.ApplicationType == Helper.ApplicationType.R ? newEffectiveDate.AddYears(1) : effectiveDate) : (applicationFilter.ApplicationType == Helper.ApplicationType.R ? effectiveDate.AddYears(1) : effectiveDate);
                                     maturityDate = applicationForIssuePolicy.Insurance.COVER_TYPE != bl_micro_product_config.PERIOD_TYPE.Y ? (applicationForIssuePolicy.Insurance.COVER_TYPE != bl_micro_product_config.PERIOD_TYPE.M ? newEffectiveDate : newEffectiveDate.AddMonths(applicationForIssuePolicy.Insurance.TERME_OF_COVER)) : newEffectiveDate.AddYears(1);
                                     expiryDate = maturityDate.AddDays(-1.0);
-                                   cusAge = Calculation.Culculate_Customer_Age(CUSTOMER.DATE_OF_BIRTH.ToString("dd/MM/yyyy"), applicationForIssuePolicy.Application.APPLICATION_DATE);
+                                    cusAge = Calculation.Culculate_Customer_Age(CUSTOMER.DATE_OF_BIRTH.ToString("dd/MM/yyyy"), applicationForIssuePolicy.Application.APPLICATION_DATE);
                                     polDetail = new bl_micro_policy_detail()
                                     {
                                         POLICY_ID = POLICY.POLICY_ID,
@@ -402,7 +402,7 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
                                     #endregion policydetail
                                     if (flagSubmit)
                                     {
-                                       
+
                                         #region rider
                                         if (string.IsNullOrWhiteSpace(applicationForIssuePolicy.Rider.PRODUCT_ID))/*not attached rider*/
                                         {
@@ -420,7 +420,7 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
                                                 DISCOUNT_AMOUNT = applicationForIssuePolicy.Rider.DISCOUNT_AMOUNT,
                                                 TOTAL_AMOUNT = applicationForIssuePolicy.Rider.TOTAL_AMOUNT,
                                                 CREATED_BY = this.userName,
-                                                CREATED_ON = tranDate    
+                                                CREATED_ON = tranDate
                                             };
                                             flagSubmit = da_micro_policy_rider.SaveRider(polRider);
                                         }
@@ -428,7 +428,7 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
 
                                         if (flagSubmit) /*save rider success*/
                                         {
-                                          
+
                                             #region Payment
                                             double referralFee = 0.0;
                                             double incentive = 0.0;
@@ -477,7 +477,7 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
 
                                             if (flagSubmit)
                                             {
-                                                
+
                                                 #region Beneficiary
                                                 List<string> benIdList = new List<string>();
                                                 if (applicationForIssuePolicy.Beneficiaries.Count > 0)
@@ -493,7 +493,7 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
                                                             RELATION = beneficiary.RELATION,
                                                             PERCENTAGE_OF_SHARE = beneficiary.PERCENTAGE_OF_SHARE,
                                                             CREATED_BY = this.userName,
-                                                            CREATED_ON = tranDate    .AddSeconds(1.0),
+                                                            CREATED_ON = tranDate.AddSeconds(1.0),
                                                             BirthDate = beneficiary.DOB,
                                                             Gender = string.Concat((object)beneficiary.Gender),
                                                             IdType = beneficiary.IdType,
@@ -506,11 +506,11 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
                                                         }
                                                         else
                                                             benIdList.Add(beneficiary.ID);
-                                                            
+
                                                     }
-                                                   
+
                                                 }
-#endregion Beneficiary
+                                                #endregion Beneficiary
 
                                                 #region Primary Beneficiary
                                                 bl_micro_policy_beneficiary.beneficiary_primary primaryBen = new bl_micro_policy_beneficiary.beneficiary_primary();
@@ -533,9 +533,9 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
 
                                                 if (flagSubmit)
                                                 {
-                                                   
+
                                                     #region Policy Address
-                                                    polAddress=new bl_micro_policy_address()
+                                                    polAddress = new bl_micro_policy_address()
                                                     {
                                                         HouseNoKh = CUSTOMER.HOUSE_NO_KH,
                                                         HouseNoEn = CUSTOMER.HOUSE_NO_EN,
@@ -555,7 +555,7 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
 
                                                     if (flagSubmit)
                                                     {
-                                                       
+
                                                         string approver = AppConfiguration.GetApplicationApprover();
                                                         if (approver != "")
                                                         {
@@ -654,9 +654,9 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
 
                 if (flagSubmit)
                 {
-                     string strSuccess = "<strong>Policy issue successfully</strong><br />";
+                    string strSuccess = "<strong>Policy issue successfully</strong><br />";
                     foreach (bl_micro_policy.SavedIssuePolicy savedIssuePolicy in _SavedIssuePolicyList)
-                        strSuccess +=  savedIssuePolicy.ApplicationNumber + " --> " + savedIssuePolicy.PolicyNumber + "<br />";
+                        strSuccess += savedIssuePolicy.ApplicationNumber + " --> " + savedIssuePolicy.PolicyNumber + "<br />";
                     Helper.Alert(false, strSuccess, this.lblError);
                     this.BindExisting();
                 }
@@ -664,7 +664,7 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
                 {
                     string strFail = this.ViewState["MESSAGE"].ToString() + "<br />" + "<strong>Policy roleback: </strong><br />";
                     foreach (bl_micro_policy.SavedIssuePolicy savedIssuePolicy in _SavedIssuePolicyList)
-                        strFail +=  savedIssuePolicy.PolicyNumber + " --> " + (da_banca.RoleBackIssuePolicy(savedIssuePolicy.IsExistingCustomer ? "" : savedIssuePolicy.CustomerId, savedIssuePolicy.PolicyId) ? "Successfully" : "Fail") + "<br />";
+                        strFail += savedIssuePolicy.PolicyNumber + " --> " + (da_banca.RoleBackIssuePolicy(savedIssuePolicy.IsExistingCustomer ? "" : savedIssuePolicy.CustomerId, savedIssuePolicy.PolicyId) ? "Successfully" : "Fail") + "<br />";
                     Helper.Alert(true, strFail, this.lblError);
                 }
             }
@@ -681,11 +681,11 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
 
     private void RoleBackIssuePolicy(string INPUT_MESSAGE = "")
     {
-        string roleBackSms="";
+        string roleBackSms = "";
         foreach (var polObj in _SavedIssuePolicyList)
             roleBackSms += da_banca.RoleBackIssuePolicy(polObj.IsExistingCustomer ? "" : polObj.CustomerId, polObj.PolicyId) ? string.Concat(polObj.PolicyNumber, " --> Successfully<br />") : string.Concat(polObj.PolicyNumber, " --> Fail<br />");
-       
-        Helper.Alert(true, string.Concat( "Issue Policy fail. Rolebak Policy <br />", roleBackSms), this.lblError);
+
+        Helper.Alert(true, string.Concat("Issue Policy fail. Rolebak Policy <br />", roleBackSms), this.lblError);
     }
 
     protected void ddlProduct_SelectedIndexChanged(object sender, EventArgs e)
@@ -1471,7 +1471,7 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
         this.ibtnPrintApplication.Attributes.Add("disabled", "disabled");
         this.ibtnPrintCertificate.Attributes.Add("disabled", "disabled");
         btnPrintCert.Disabled = true;
-       
+
         this.txtApplicationNumber.Attributes.Add("disabled", "disabled");
         this.txtSaleAgentID.Attributes.Add("disabled", "disabled");
         this.txtSaleAgentName.Attributes.Add("disabled", "disabled");
@@ -1868,14 +1868,23 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
         if (flag)
         {
             double num = 0.0;
-            foreach (bl_micro_application_beneficiary beneficiary in this.BeneficiaryList)
-                num += beneficiary.PERCENTAGE_OF_SHARE;
-            if (this.BeneficiaryList.Count == 0)
+            if (this.BeneficiaryList.Count > 0)
             {
-                flag = false;
-                str = "Total Percentage of share must be equal to 100%.";
+                foreach (bl_micro_application_beneficiary beneficiary in this.BeneficiaryList)
+                    num += beneficiary.PERCENTAGE_OF_SHARE;
+                if (num != 100)
+                {
+                    flag = false;
+                    str = "Total Percentage of share must be equal to 100%.";
+                }
+
             }
-            else if (this.ddlAnswer.SelectedIndex == 0)
+
+            
+        }
+        if (flag)
+        {
+            if (this.ddlAnswer.SelectedIndex == 0)
             {
                 flag = false;
                 str = "Please answer a question.";
@@ -2162,7 +2171,7 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
                 }
                 else
                 {
-                    
+
                     this.ibtnPrintCertificate.Attributes.Add("disabled", "disabled");
                     this.txtUserPremium.Attributes.Add("disabled", "disabled");
                     this.txtPaymentRefNo.Attributes.Remove("disabled");
@@ -2478,7 +2487,7 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
 
     protected void ibtnClear_Click(object sender, ImageClickEventArgs e)
     {
-        this.Page_Load(null,null);
+        this.Page_Load(null, null);
     }
 
     protected void ddlCompany_SelectedIndexChanged(object sender, EventArgs e)
@@ -2538,7 +2547,7 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
                 };
                 if (this.hdfBeneficiaryId.Value == "")
                 {
-                    applicationBeneficiary.ID = (this.BeneficiaryList.Count + 1)+"";
+                    applicationBeneficiary.ID = (this.BeneficiaryList.Count + 1) + "";
                     this.BeneficiaryList.Add(applicationBeneficiary);
                 }
                 else
@@ -2555,7 +2564,7 @@ public partial class Pages_Business_MiroIndviduleApp_individule_micro_applicatio
                     beneficiary.PERCENTAGE_OF_SHARE = Convert.ToDouble(this.txtPercentageOfShare.Text.Trim());
                 }
 
-                
+
             }
         }
         this.gvBen.DataSource = this.BeneficiaryList;

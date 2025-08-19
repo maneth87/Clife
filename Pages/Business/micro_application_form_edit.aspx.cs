@@ -43,6 +43,12 @@ public partial class Pages_Business_micro_application_form_edit : System.Web.UI.
         set { this.ViewState["BEN_LIST"] = value; }
     }
 
+    private List<bl_micro_application_beneficiary> BeneficiaryListExisting
+    {
+        get { return (List<bl_micro_application_beneficiary>)this.ViewState["BEN_LIST_EXIST"]; }
+        set { this.ViewState["BEN_LIST_EXIST"] = value; }
+    }
+
     private int _BenRowIndex
     {
         get { return (int)this.ViewState["V_BEN_INDEX"]; }
@@ -533,9 +539,10 @@ public partial class Pages_Business_micro_application_form_edit : System.Web.UI.
                                     }
 
                                 }
+
                                 if (flag)
                                 {
-                                    if (this.BeneficiaryList != null)
+                                    if (this.BeneficiaryList.Count > 0)
                                     {
                                         int benLoopStep = 1;
                                         foreach (bl_micro_application_beneficiary beneficiary in this.BeneficiaryList)
@@ -544,15 +551,16 @@ public partial class Pages_Business_micro_application_form_edit : System.Web.UI.
                                             if (beneficiary.ID.Length <= 2)/*new beneficairy*/
                                             {
                                                 beneficiary.ID = Helper.GetNewGuid(new string[2, 2] {
-                          { "TABEL","CT_MICRO_APPLICATION_BENEFICIARY"}, {"FIELD","ID"}
-                        });
+                                                    { "TABEL","CT_MICRO_APPLICATION_BENEFICIARY"},
+                                                    {"FIELD","ID"}
+                                                });
 
                                                 beneficiary.CREATED_BY = this.userName;
                                                 beneficiary.CREATED_ON = benLoopStep == 1 ? tranDate : tranDate.AddSeconds(1.0);
                                                 flag = da_micro_application_beneficiary.SaveApplicationBeneficiary(beneficiary);
-                                            }/*existing bendeficary*/
+                                            }
                                             else
-                                            {
+                                            {/*existing bendeficary*/
                                                 beneficiary.UPDATED_BY = this.userName;
                                                 beneficiary.UPDATED_ON = benLoopStep == 1 ? tranDate : tranDate.AddSeconds(1.0);
                                                 flag = da_micro_application_beneficiary.UpdateApplicationBeneficiary(beneficiary, da_micro_application_beneficiary.DeleteBeneficiaryOption.ID);
@@ -561,9 +569,16 @@ public partial class Pages_Business_micro_application_form_edit : System.Web.UI.
                                                 break;
                                             benLoopStep++;
                                         }
-                                    }/*beneficiary is empty*/
+                                    }
                                     else
-                                        flag = false;
+                                    { /*beneficiary is empty*/
+                                        /*remove exiting beneficiary in database*/
+                                        if (BeneficiaryListExisting.Count > 0)
+                                        {
+                                            flag = da_micro_application_beneficiary.DeleteApplicationBeneficiary(applicationNumber);
+                                        }
+
+                                    }
 
                                     if (flag)
                                     {
@@ -587,7 +602,9 @@ public partial class Pages_Business_micro_application_form_edit : System.Web.UI.
                                             }
                                         }
                                         else if (existingprimaryBeneciary != null)/*attached primary beneficiary, then remove existing primary beneficiary*/
+                                        {
                                             da_micro_application_beneficiary.PremaryBeneficiary.Delete(existingprimaryBeneciary.ApplicationNumber);
+                                        }
 
                                         if (flag)
                                         {
@@ -769,17 +786,20 @@ public partial class Pages_Business_micro_application_form_edit : System.Web.UI.
                                                     flag = da_micro_policy_payment.UpdatePayment(PAYMENT);
                                                     if (flag)
                                                     {
+                                                        List<bl_micro_policy_beneficiary> existingPolBenList = da_micro_policy_beneficiary.GetBeneficiaryList(POLICY.POLICY_ID);
                                                         if (this.BeneficiaryList != null)
                                                         {
-                                                            foreach (bl_micro_policy_beneficiary beneficiary in da_micro_policy_beneficiary.GetBeneficiaryList(POLICY.POLICY_ID))
+                                                            foreach (bl_micro_policy_beneficiary beneficiary in existingPolBenList)// da_micro_policy_beneficiary.GetBeneficiaryList(POLICY.POLICY_ID))
                                                                 da_micro_policy_beneficiary.DeleteBeneficiary(beneficiary.ID);
+
                                                             foreach (bl_micro_application_beneficiary beneficiary in this.BeneficiaryList)
                                                             {
                                                                 bl_micro_policy_beneficiary BENEFICIARY = new bl_micro_policy_beneficiary();
                                                                 beneficiary.ID = Helper.GetNewGuid(new string[2, 2]
-                                {
-                                  {"TABEL","CT_MICRO_POLICY_BENEFICIARY"},{"FIELD","ID"}
-                                });
+                                                                {
+                                                                  {"TABEL","CT_MICRO_POLICY_BENEFICIARY"},
+                                                                  {"FIELD","ID"}
+                                                                });
                                                                 BENEFICIARY.ADDRESS = beneficiary.ADDRESS;
                                                                 BENEFICIARY.AGE = beneficiary.AGE;
                                                                 BENEFICIARY.IdType = beneficiary.IdType;
@@ -794,6 +814,17 @@ public partial class Pages_Business_micro_application_form_edit : System.Web.UI.
                                                                 flag = da_micro_policy_beneficiary.SaveBeneficiary(BENEFICIARY);
                                                                 if (!flag)
                                                                     break;
+                                                            }
+                                                        }
+                                                        else
+                                                        { /*beneficiary is empty*/
+                                                            foreach (var ben in existingPolBenList)
+                                                            {
+                                                                flag = da_micro_policy_beneficiary.DeleteBeneficiary(ben.ID);
+                                                                if (!flag)
+                                                                {
+                                                                    break;
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -1311,17 +1342,26 @@ public partial class Pages_Business_micro_application_form_edit : System.Web.UI.
                 str = "Rider Premium is required.";
             }
         }
+
         if (flag)
         {
             double num = 0.0;
-            foreach (bl_micro_application_beneficiary beneficiary in this.BeneficiaryList)
-                num += beneficiary.PERCENTAGE_OF_SHARE;
-            if (this.BeneficiaryList.Count == 0)
+
+            if (BeneficiaryList.Count > 0)
             {
-                flag = false;
-                str = "Total Percentage of share must be equal to 100%.";
+                foreach (bl_micro_application_beneficiary beneficiary in this.BeneficiaryList)
+                    num += beneficiary.PERCENTAGE_OF_SHARE;
+                if (num != 100)
+                {
+                    flag = false;
+                    str = "Total Percentage of share must be equal to 100%.";
+                }
+
             }
-            else if (this.ddlAnswer.SelectedIndex == 0)
+        }
+        if (flag)
+        {
+            if (this.ddlAnswer.SelectedIndex == 0)
             {
                 flag = false;
                 str = "Please answer a question.";
@@ -1556,6 +1596,7 @@ public partial class Pages_Business_micro_application_form_edit : System.Web.UI.
                     this._IsMainPolicy = applicationDetail.Application.MainApplicationNumber == "";
                     if (!this._IsMainPolicy && firstLoad)
                         Helper.Alert(false, "Sub Application is selected.", this.lblError);
+
                     Helper.SelectedDropDownListIndex("VALUE", this.ddlBranch, applicationDetail.OfficeCode);
                     this.txtSaleAgentID.Text = applicationDetail.Application.SALE_AGENT_ID;
                     this.txtSaleAgentName.Text = applicationDetail.Application.SALE_AGENT_NAME;
@@ -1745,7 +1786,9 @@ public partial class Pages_Business_micro_application_form_edit : System.Web.UI.
                             this.dvPrimaryBeneficiary.Attributes.Add("style", "display:none;");
                     }
                     this.BeneficiaryList = applicationDetail.Beneficiaries;
-                    this.gvBen.DataSource = (object)this.BeneficiaryList;
+                    BeneficiaryListExisting = applicationDetail.Beneficiaries;
+
+                    this.gvBen.DataSource = this.BeneficiaryList;
                     this.gvBen.DataBind();
                     Helper.SelectedDropDownListIndex("Value", this.ddlAnswer, string.Concat((object)applicationDetail.Questionaire.ANSWER));
                     this.txtAnswerRemarks.Text = applicationDetail.Questionaire.ANSWER_REMARKS;
@@ -1919,22 +1962,24 @@ public partial class Pages_Business_micro_application_form_edit : System.Web.UI.
                 };
                 if (this.hdfBeneficiaryId.Value == "")
                 {
-                    applicationBeneficiary.ID = string.Concat((object)(this.BeneficiaryList.Count + 1));
-                    this.BeneficiaryList.Add(applicationBeneficiary);
+                    applicationBeneficiary.ID = (BeneficiaryList.Count + 1) + "";
+
                 }
-                else
-                {
-                    bl_micro_application_beneficiary beneficiary = this.BeneficiaryList[this._BenRowIndex];
-                    beneficiary.FULL_NAME = this.txtFullName.Text.Trim();
-                    beneficiary.AGE = this.txtAge.Text.Trim();
-                    beneficiary.Gender = Convert.ToInt32(this.ddlBenGender.SelectedValue);
-                    beneficiary.DOB = this.txtBenDOB.Text.Trim() == "" ? new DateTime(1900, 1, 1) : Helper.FormatDateTime(this.txtBenDOB.Text.Trim());
-                    beneficiary.IdType = Convert.ToInt32(this.ddlBenIdType.SelectedValue);
-                    beneficiary.IdNo = this.txtBenIdNo.Text.Trim();
-                    beneficiary.ADDRESS = this.txtBenAddress.Text.Trim();
-                    beneficiary.RELATION = this.ddlRelation.SelectedValue;
-                    beneficiary.PERCENTAGE_OF_SHARE = Convert.ToDouble(this.txtPercentageOfShare.Text.Trim());
-                }
+                //else
+                //{
+                //    bl_micro_application_beneficiary beneficiary = this.BeneficiaryList[this._BenRowIndex];
+                //    beneficiary.FULL_NAME = this.txtFullName.Text.Trim();
+                //    beneficiary.AGE = this.txtAge.Text.Trim();
+                //    beneficiary.Gender = Convert.ToInt32(this.ddlBenGender.SelectedValue);
+                //    beneficiary.DOB = this.txtBenDOB.Text.Trim() == "" ? new DateTime(1900, 1, 1) : Helper.FormatDateTime(this.txtBenDOB.Text.Trim());
+                //    beneficiary.IdType = Convert.ToInt32(this.ddlBenIdType.SelectedValue);
+                //    beneficiary.IdNo = this.txtBenIdNo.Text.Trim();
+                //    beneficiary.ADDRESS = this.txtBenAddress.Text.Trim();
+                //    beneficiary.RELATION = this.ddlRelation.SelectedValue;
+                //    beneficiary.PERCENTAGE_OF_SHARE = Convert.ToDouble(this.txtPercentageOfShare.Text.Trim());
+                //}
+
+                this.BeneficiaryList.Add(applicationBeneficiary);
             }
         }
         this.gvBen.DataSource = (object)this.BeneficiaryList;
@@ -2421,29 +2466,29 @@ public partial class Pages_Business_micro_application_form_edit : System.Web.UI.
 
 
     [WebMethod(EnableSession = true)]
-    public  static  string ConfirmAction(string policyId, string attachedPolicyInsurance)
+    public static string ConfirmAction(string policyId, string attachedPolicyInsurance)
     {
-      
-       var username = HttpContext.Current.User.Identity.Name;
-     
-       var pol = da_micro_policy.GetPolicyByID(policyId, username);
-       var pro = da_micro_product_config.ProductConfig.GetProductMicroProduct(pol.PRODUCT_ID);
 
-        da_sys_activity_log.Save(new bl_sys_activity_log(username, "", bl_sys_activity_log.ACTIVITY_LOG_TYPE.TYPE.VIEW, DateTime.Now, "User views certificate. [Pol No:" + pol.POLICY_NUMBER +"]", Membership.ApplicationName));
+        var username = HttpContext.Current.User.Identity.Name;
+
+        var pol = da_micro_policy.GetPolicyByID(policyId, username);
+        var pro = da_micro_product_config.ProductConfig.GetProductMicroProduct(pol.PRODUCT_ID);
+
+        da_sys_activity_log.Save(new bl_sys_activity_log(username, "", bl_sys_activity_log.ACTIVITY_LOG_TYPE.TYPE.VIEW, DateTime.Now, "User views certificate. [Pol No:" + pol.POLICY_NUMBER + "]", Membership.ApplicationName));
         if (pro.ProductType.ToUpper() == bl_micro_product_config.PRODUCT_TYPE.MICRO_LOAN.ToString() || pro.CreatedOn.Year >= 2025)
         {
             HttpContext.Current.Session["POL_ID_PRINT"] = new List<string>() 
       {
         pol.POLICY_ID
       };
-          
-            return "load_new_certificate.aspx?policyType=IND&printPolInsurance="+ (attachedPolicyInsurance);
+
+            return "load_new_certificate.aspx?policyType=IND&printPolInsurance=" + (attachedPolicyInsurance);
         }
         else
         {
-          
+
             return string.Format("banca_micro_cert.aspx?P_ID={0}&P_TYPE=IND", pol.POLICY_ID);
         }
-       
+
     }
 }
